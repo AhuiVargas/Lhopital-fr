@@ -13,10 +13,10 @@ const Placeholder: React.FC = () => {
       onClick={handleClick}
     >
       <Image
-        src="/placeholder.webp"
+        src="/placeholderWide.png"
         alt="Placeholder"
         fill
-        sizes="(max-width: 768px) 100vw, 100vh"
+        sizes="100vw, 100vh"
         className="object-cover md:object-center"
         priority
       />
