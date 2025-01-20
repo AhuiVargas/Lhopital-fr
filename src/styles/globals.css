@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'ObviaNarrowBold';
+  src: url('/obvia_narrow_bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -15,7 +22,6 @@ body {
   color: white;
   line-height: 1.5;  
   -webkit-font-smoothing: antialiased;
-  
 }
 
 img, picture, video, canvas, svg {
