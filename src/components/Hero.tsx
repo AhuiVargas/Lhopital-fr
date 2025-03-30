@@ -1,9 +1,9 @@
 'use client'
 
 import Image from "next/image";
+import Header from "./Header";
 
 export default function Hero() {
-
   const handleClick = () => {
     window.location.href = 'mailto:contacto@lhopital-fr.mx';
   };
@@ -15,32 +15,52 @@ export default function Hero() {
         backgroundImage: `url('hero.png')`,
       }}
     >
-      {/* Light overlay for contrast */}
-      <div className="absolute inset-0 bg-[#172E6E]/40 z-0" />
+      {/* Overlay for contrast */}
+      <div className="absolute inset-0 bg-[#172E6E]/30 z-0" />
+
+      {/* Transparent floating header */}
+      <Header />
+
+      {/* Top-left image (desktop only) */}
+      <div className="hidden md:block absolute top-8 left-2 z-20">
+        <Image
+          src="/letters.png"
+          alt="Desktop Floating Image"
+          width={300}
+          height={300}
+          priority
+        />
+      </div>
 
       {/* Hero content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 font-[ObviaNarrowBold]">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 pt-24">
         {/* Logo */}
-        <div className="mb-6">
+        <div className="mb-4">
           <Image
             src="/escudo_color.png"
             alt="Lhopital-FR logo"
-            width={220}
-            height={220}
+            width={250}
+            height={250}
             priority
           />
         </div>
 
-        <h2 className="text-5xl md:text-5xl font-bold mb-4 font-outline-2" >
-          Fire and Rescue Gear
-        </h2>
-        {/* <p className="text-lg md:text-xl mb-6 max-w-xl">
-          Dedicated to protecting citizens with professional emergency response.
-        </p> */}
+        {/* Mobile-only image (centered under logo) */}
+        <div className="block md:hidden -mt-20 -mb-16 z-20">
+          <Image
+            src="/lettersMobile.png"
+            alt="Mobile Centered Image"
+            width={620}
+            height={620}
+            priority
+          />
+        </div>
+
+        {/* CTA Button */}
         <button
           onClick={handleClick}
-          className="bg-[#B2202C] text-white px-6 py-3 rounded font-semibold hover:scale-110 focus:outline-none transition-transform duration-200 ease-in-out"
-          >
+          className="bg-[#B2202C] text-white mt-16 px-6 py-3 rounded font-semibold hover:scale-110 focus:outline-none transition-transform duration-200 ease-in-out"
+        >
           Contact us
         </button>
       </div>
