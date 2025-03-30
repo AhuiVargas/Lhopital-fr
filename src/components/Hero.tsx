@@ -59,7 +59,7 @@ export default function Hero() {
         {/* CTA Button */}
         <button
           onClick={handleClick}
-          className="bg-[#B2202C] text-white mt-16 px-6 py-3 rounded font-semibold hover:scale-110 focus:outline-none transition-transform duration-200 ease-in-out"
+          className="bg-[#B2202C] text-white text-2xl mt-16 px-6 py-3 rounded font-semibold hover:scale-110 focus:outline-none transition-transform duration-200 ease-in-out"
         >
           Contact us
         </button>

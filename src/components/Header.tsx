@@ -23,8 +23,7 @@ export default function Header() {
   return (
     <>
       {/* Desktop Header */}
-      <header className="absolute top-0 left-0 w-full z-30 hidden md:flex justify-between items-center px-6 py-4 text-white">
-        <div className="text-lg font-bold tracking-wide">Lhopital-FR</div>
+      <header className="absolute top-0 left-0 w-full z-30 hidden md:flex justify-end items-center px-6 py-4 text-white">
         <nav className="space-x-6 text-2xl">
           <a href="#about" className="hover:underline">About</a>
           <a href="#services" className="hover:underline">Services</a>
@@ -33,12 +32,12 @@ export default function Header() {
       </header>
 
       {/* Mobile Hamburger Button (animated & sticky) */}
-      <div className="md:hidden fixed top-4 right-4 z-50">
+      <div className="md:hidden fixed top-4 right-8 z-50">
         <Hamburger
           toggled={isOpen}
           toggle={setIsOpen}
           color={hamburgerColor}
-          size={28}
+          size={40}
           direction="right"
           duration={0.4}
           rounded
