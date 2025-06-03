@@ -12,11 +12,11 @@ export default function Hero() {
     <section
       className="relative w-full h-screen bg-cover bg-center bg-no-repeat text-center text-white"
       style={{
-        backgroundImage: `url('hero.png')`,
+        backgroundImage: `url('HeroTst.jpeg')`,
       }}
     >
       {/* Overlay for contrast */}
-      <div className="absolute inset-0 bg-[#172E6E]/30 z-0" />
+      <div className="absolute inset-0 bg-[#172E6E]/60 z-0" />
 
       {/* Transparent floating header */}
       <Header />
