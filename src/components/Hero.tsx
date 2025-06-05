@@ -18,13 +18,12 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[#172E6E]/60 z-0" />
 
       {/* Top-left image (desktop only) */}
-      <div className="hidden md:block absolute top-8 left-2 z-20">
+      <div className="hidden md:block absolute top-16 left-2 z-20">
         <Image
           src="/letters.png"
           alt="Desktop Floating Image"
           width={300}
           height={300}
-          priority
         />
       </div>
 
@@ -33,11 +32,11 @@ export default function Hero() {
         {/* Logo */}
         <div className="mb-4 logo-trigger">
           <Image
-            src="/escudo_color.png"
+            src="/LP-escudos/escudo_color.png"
             alt="Lhopital-FR logo"
             width={250}
             height={250}
-            priority
+
           />
         </div>
 
@@ -48,7 +47,6 @@ export default function Hero() {
             alt="Mobile Centered Image"
             width={620}
             height={620}
-            priority
           />
         </div>
 

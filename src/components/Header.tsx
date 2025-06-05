@@ -3,6 +3,9 @@
 import { useState, useEffect } from "react";
 import { Sling as Hamburger } from "hamburger-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,24 +16,35 @@ export default function Header() {
     window.location.href = "mailto:contacto@lhopital-fr.mx";
   };
 
+  const pathname = usePathname();
+
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
+  const updateSticky = () => {
+    const scrollY = window.scrollY;
+
+    if (pathname !== "/") {
+      setIsSticky(true);
+    } else {
       const logoElement = document.querySelector(".logo-trigger");
       if (logoElement) {
         const logoPosition = logoElement.getBoundingClientRect().bottom;
         setIsSticky(logoPosition < 0);
       }
-      setIsDark(scrollY < window.innerHeight - 100);
-    };
+    }
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    setIsDark(scrollY < window.innerHeight - 100);
+  };
+
+  window.addEventListener("scroll", updateSticky);
+  updateSticky(); // run once on mount or route change
+
+  return () => window.removeEventListener("scroll", updateSticky);
+}, [pathname]); // this is critical
+
 
   const hamburgerColor = isOpen ? "#FFFFFF" : isDark ? "#FFFFFF" : "#000000";
   const headerClasses = `${
-    isSticky ? "fixed top-0 bg-[#172E6E] shadow-lg" : "absolute"
+    isSticky ? "fixed top-0 bg-black shadow-lg" : "absolute"
   } left-0 w-full z-30 transition-all duration-300`;
 
   return (
@@ -47,9 +61,31 @@ export default function Header() {
 
       {/* Desktop Header */}
       <header
-        className={`${headerClasses} hidden md:flex items-center px-6 py-4 text-white`}
+        className={`${headerClasses} min-h-20 hidden md:flex items-center justify-between px-6 py-2 mb-10 text-white`}
       >
-        <div className="flex-1">
+        <div className="flex items-center flex-1">
+          {isSticky && (
+            <Link href="/" scroll={true} as="image">
+              <Image
+                src="/LP-escudos/escudo_bw.png"
+                alt="Logo"
+                width={50}
+                height={50}
+              />
+            </Link>
+          )}
+        </div>
+
+        <nav className="flex-1 flex justify-center space-x-6 text-2xl">
+          <a href="#about" className="hover:underline">
+            About
+          </a>
+          <a href="#services" className="hover:underline">
+            Services
+          </a>
+        </nav>
+
+        <div className="flex-1 flex justify-end">
           {isSticky && (
             <button
               onClick={handleClick}
@@ -59,17 +95,6 @@ export default function Header() {
             </button>
           )}
         </div>
-        <nav className="space-x-6 text-2xl">
-          <a href="#about" className="hover:underline">
-            About
-          </a>
-          <a href="#services" className="hover:underline">
-            Services
-          </a>
-          <a href="#contact" className="hover:underline">
-            Contact
-          </a>
-        </nav>
       </header>
 
       {/* Mobile Hamburger Button (animated & sticky) */}
