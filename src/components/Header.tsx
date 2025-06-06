@@ -92,7 +92,7 @@ function HeaderContent({
 						{dropdownOpen && (
 							<div
 								className={`absolute top-full left-0 w-72 text-white text-center py-4 px-6 space-y-2 z-50
-                  ${scrolled ? "bg-black" : "bg-transparent"}`}
+                                ${scrolled ? "bg-black" : "bg-transparent"}`}
 							>
 								<NavLink
 									href="/proteccion-personal"
@@ -101,17 +101,11 @@ function HeaderContent({
 									Equipo de Protección Personal
 								</NavLink>
 								<NavLink
-									href="/estabilizacion"
+									href="/rescate"
 									className="block hover:underline"
 								>
-									Equipo de Estabilización
+									Equipo de Rescate
 								</NavLink>
-								{/* <NavLink
-									href="/rescate-vehicular"
-									className="block hover:underline"
-								>
-									Equipo de Rescate Vehicular
-								</NavLink> */}
 								<NavLink href="/hazmat" className="block hover:underline">
 									Equipo Hazmat
 								</NavLink>
@@ -126,7 +120,7 @@ function HeaderContent({
 			</div>
 
 			{/* Contact button */}
-			<div className="hidden md:flex ml-6">
+			<div className="hidden md:flex">
                 <CTAButton onClick={onClick} hovered={false} >CONTÁCTANOS</CTAButton>
 			</div>
 
@@ -179,19 +173,12 @@ function MobileMenu({
 						Equipo de Protección Personal
 					</NavLink>
 					<NavLink
-						href="/estabilizacion"
+						href="/rescate"
 						onClick={() => setIsOpen(false)}
 						className="hover:underline"
 					>
-						Equipo de Estabilización
+						Equipo de Rescate
 					</NavLink>
-					{/* <NavLink
-						href="/rescate-vehicular"
-						onClick={() => setIsOpen(false)}
-						className="hover:underline"
-					>
-						Equipo de Rescate Vehicular
-					</NavLink> */}
 					<NavLink
 						href="/hazmat"
 						onClick={() => setIsOpen(false)}

@@ -9,12 +9,16 @@ export default function Hero() {
 	};
 
 	return (
-		<section
-			className="relative w-full h-screen bg-cover bg-center bg-no-repeat text-center text-white"
-			style={{
-				backgroundImage: `url('HeroTst.jpeg')`,
-			}}
-		>
+		<section className="relative w-full h-screen overflow-hidden text-center text-white">
+			<video
+				src="/HeroVid.webm"
+				autoPlay
+				muted
+				loop
+				playsInline
+				className="absolute top-0 left-0 w-full h-full object-cover z-0"
+			/>
+
 			{/* Overlay for contrast */}
 			<div className="absolute inset-0 bg-[#172E6E]/60 z-0" />
 
@@ -31,7 +35,7 @@ export default function Hero() {
 			{/* Hero content */}
 			<div className="relative z-10 flex flex-col items-center justify-center h-full px-4 pt-24">
 				{/* Logo */}
-				<div className="mb-4 logo-trigger">
+				<div className="mb-4">
 					<Image
 						src="/LP-escudos/escudo_color.png"
 						alt="Lhopital-FR logo"
@@ -51,7 +55,9 @@ export default function Hero() {
 				</div>
 
 				{/* CTA Button */}
-                <CTAButton onClick={handleClick} hovered >CONTÁCTANOS</CTAButton>
+				<CTAButton onClick={handleClick} hovered>
+					CONTÁCTANOS
+				</CTAButton>
 			</div>
 		</section>
 	);
