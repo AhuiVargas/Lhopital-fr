@@ -6,6 +6,7 @@ import { Sling as Hamburger } from "hamburger-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import CTAButton from "./CTAButton";
 
 function NavLink({
 	href,
@@ -126,18 +127,7 @@ function HeaderContent({
 
 			{/* Contact button */}
 			<div className="hidden md:flex ml-6">
-				<button
-					onClick={onClick}
-					className="relative px-4 py-2 text-white font-light bg-transparent"
-					style={{
-						border: "1px solid transparent",
-						borderImage:
-							"linear-gradient(263deg, #FFFFFF 0%, #5C76B5 50%, #D1686F 100%)",
-						borderImageSlice: 1,
-					}}
-				>
-					CONTÁCTANOS
-				</button>
+                <CTAButton onClick={onClick} hovered={false} >CONTÁCTANOS</CTAButton>
 			</div>
 
 			{/* Mobile Hamburger */}
