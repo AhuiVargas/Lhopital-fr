@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body className="min-h-screen flex flex-col bg-white font-[rider] text-white">
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 mt-20">{children}</main>
         <Footer />
       </body>
     </html>

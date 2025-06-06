@@ -19,28 +19,25 @@ export default function Header() {
   const pathname = usePathname();
 
   useEffect(() => {
-  const updateSticky = () => {
-    const scrollY = window.scrollY;
+    const updateSticky = () => {
+      const scrollY = window.scrollY;
 
-    if (pathname !== "/") {
-      setIsSticky(true);
-    } else {
-      const logoElement = document.querySelector(".logo-trigger");
-      if (logoElement) {
-        const logoPosition = logoElement.getBoundingClientRect().bottom;
-        setIsSticky(logoPosition < 0);
+      if (pathname !== "/") {
+        setIsSticky(true);
+      } else {
+        const logoElement = document.querySelector(".logo-trigger");
+        if (logoElement) {
+          const logoPosition = logoElement.getBoundingClientRect().bottom;
+          setIsSticky(logoPosition < 0);
+        }
       }
-    }
 
-    setIsDark(scrollY < window.innerHeight - 100);
-  };
+      setIsDark(scrollY < window.innerHeight - 100);
+    };
 
-  window.addEventListener("scroll", updateSticky);
-  updateSticky(); // run once on mount or route change
-
-  return () => window.removeEventListener("scroll", updateSticky);
-}, [pathname]); // this is critical
-
+    window.addEventListener("scroll", updateSticky);
+    return () => window.removeEventListener("scroll", updateSticky);
+  }, [pathname]);
 
   const hamburgerColor = isOpen ? "#FFFFFF" : isDark ? "#FFFFFF" : "#000000";
   const headerClasses = `${
@@ -61,16 +58,16 @@ export default function Header() {
 
       {/* Desktop Header */}
       <header
-        className={`${headerClasses} min-h-20 hidden md:flex items-center justify-between px-6 py-2 mb-10 text-white`}
+        className={`${headerClasses} min-h-20 hidden md:flex items-center justify-between px-6 text-white`}
       >
         <div className="flex items-center flex-1">
           {isSticky && (
-            <Link href="/" scroll={true} as="image">
+            <Link href="/" scroll={true}>
               <Image
                 src="/LP-escudos/escudo_bw.png"
                 alt="Logo"
-                width={50}
-                height={50}
+                width={65}
+                height={65}
               />
             </Link>
           )}
