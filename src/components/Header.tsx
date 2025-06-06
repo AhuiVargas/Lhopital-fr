@@ -1,135 +1,268 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { Sling as Hamburger } from "hamburger-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
-export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isSticky, setIsSticky] = useState(false);
-  const [isDark, setIsDark] = useState(true);
+function NavLink({
+	href,
+	children,
+	onClick,
+	className = "",
+}: {
+	href: string;
+	children: React.ReactNode;
+	onClick?: () => void;
+	className?: string;
+}) {
+	const router = useRouter();
 
-  const handleClick = () => {
-    window.location.href = "mailto:contacto@lhopital-fr.mx";
-  };
+	const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+		if (href.startsWith("#")) {
+			e.preventDefault();
+			router.push(`/${href}`);
+		}
 
-  const pathname = usePathname();
+		if (onClick) onClick();
+	};
 
-  useEffect(() => {
-    const updateSticky = () => {
-      const scrollY = window.scrollY;
+	return (
+		<a href={href} onClick={handleClick} className={className}>
+			{children}
+		</a>
+	);
+}
 
-      if (pathname !== "/") {
-        setIsSticky(true);
-      } else {
-        const logoElement = document.querySelector(".logo-trigger");
-        if (logoElement) {
-          const logoPosition = logoElement.getBoundingClientRect().bottom;
-          setIsSticky(logoPosition < 0);
-        }
-      }
+function MobileContactBar({ onClick }: { onClick: () => void }) {
+	return (
+		<div className="md:hidden fixed top-0 left-0 w-full h-[40.5px] bg-[#272828] z-40 shadow-lg flex items-center justify-center">
+			<button
+				onClick={onClick}
+				className="bg-gradient-to-r from-[#5C76B5] via-50% to-[#D1686F] text-transparent bg-clip-text min-h-full font-thin text-xl"
+			>
+				CONTÁCTANOS
+			</button>
+		</div>
+	);
+}
 
-      setIsDark(scrollY < window.innerHeight - 100);
-    };
-
-    window.addEventListener("scroll", updateSticky);
-    return () => window.removeEventListener("scroll", updateSticky);
-  }, [pathname]);
-
-  const hamburgerColor = isOpen ? "#FFFFFF" : isDark ? "#FFFFFF" : "#000000";
-  const headerClasses = `${
-    isSticky ? "fixed top-0 bg-black shadow-lg" : "absolute"
-  } left-0 w-full z-30 transition-all duration-300`;
+function HeaderContent({
+  isOpen,
+  setIsOpen,
+  onClick,
+  scrolled,
+}: {
+  isOpen: boolean;
+  setIsOpen: (value: boolean) => void;
+  onClick: () => void;
+  scrolled: boolean;
+}) {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <>
-      {/* Mobile Top Sticky Bar */}
-      <div className="md:hidden fixed top-0 left-0 w-full h-[41.5px] bg-[#e5e3dc] z-40 shadow-lg flex items-center justify-center">
-        <button
-          onClick={handleClick}
-          className="bg-gradient-to-r from-[#172E6E] via-50% to-[#B2202C] text-transparent bg-clip-text min-h-full font-thin text-xl"
-        >
-          CONTACTANOS
-        </button>
-      </div>
+		<div className="flex text-xl items-center justify-between w-full">
+			{/* Logo */}
+			<Link href="/" scroll>
+				<Image
+					src="/LP-escudos/escudo_bw.png"
+					alt="Logo"
+					width={70}
+					height={70}
+				/>
+			</Link>
 
-      {/* Desktop Header */}
-      <header
-        className={`${headerClasses} min-h-20 hidden md:flex items-center justify-between px-6 text-white`}
-      >
-        <div className="flex items-center flex-1">
-          {isSticky && (
-            <Link href="/" scroll={true}>
-              <Image
-                src="/LP-escudos/escudo_bw.png"
-                alt="Logo"
-                width={65}
-                height={65}
-              />
-            </Link>
-          )}
-        </div>
+			{/* Desktop Nav */}
+			<div className="hidden md:flex items-center justify-center flex-1 text-xl">
+				<nav className="flex items-center space-x-10 text-white relative mx-auto">
+					<NavLink href="#about" className="hover:underline">
+						Nosotros
+					</NavLink>
 
-        <nav className="flex-1 flex justify-center space-x-6 text-2xl">
-          <a href="#about" className="hover:underline">
-            About
-          </a>
-          <a href="#services" className="hover:underline">
-            Services
-          </a>
-        </nav>
+					{/* Soluciones dropdown */}
+					<div
+						onMouseEnter={() => setDropdownOpen(true)}
+						onMouseLeave={() => setDropdownOpen(false)}
+					>
+						<button className="hover:underline">Soluciones</button>
 
-        <div className="flex-1 flex justify-end">
-          {isSticky && (
-            <button
-              onClick={handleClick}
-              className="bg-[#B2202C] text-white px-6 py-2 rounded font-semibold hover:scale-110 transition-transform duration-200 ease-in-out text-xl"
-            >
-              Contacto
-            </button>
-          )}
-        </div>
-      </header>
+						{dropdownOpen && (
+							<div
+								className={`absolute top-full left-0 w-72 text-white text-center py-4 px-6 space-y-2 z-50
+                  ${scrolled ? "bg-black" : "bg-transparent"}`}
+							>
+								<NavLink
+									href="/proteccion-personal"
+									className="block hover:underline"
+								>
+									Equipo de Protección Personal
+								</NavLink>
+								<NavLink
+									href="/estabilizacion"
+									className="block hover:underline"
+								>
+									Equipo de Estabilización
+								</NavLink>
+								{/* <NavLink
+									href="/rescate-vehicular"
+									className="block hover:underline"
+								>
+									Equipo de Rescate Vehicular
+								</NavLink> */}
+								<NavLink href="/hazmat" className="block hover:underline">
+									Equipo Hazmat
+								</NavLink>
+							</div>
+						)}
+					</div>
 
-      {/* Mobile Hamburger Button (animated & sticky) */}
-      <div className="md:hidden fixed top-[45px] right-8 z-50">
-        <Hamburger
-          toggled={isOpen}
-          toggle={setIsOpen}
-          color={hamburgerColor}
-          size={40}
-          direction="right"
-          duration={0.4}
-          rounded
-          label="Show menu"
-        />
-      </div>
+					<NavLink href="#contact" className="hover:underline">
+						Contacto
+					</NavLink>
+				</nav>
+			</div>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -40 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 40 }}
-            transition={{ duration: 0.3 }}
-            className="fixed top-[41.5px] left-0 w-full h-[calc(100vh-41.5px)] bg-[#172E6E] flex flex-col items-center justify-center space-y-8 text-3xl z-40 text-white"
-          >
-            <a href="#about" onClick={() => setIsOpen(false)}>
-              About
-            </a>
-            <a href="#services" onClick={() => setIsOpen(false)}>
-              Services
-            </a>
-            <a href="#contact" onClick={() => setIsOpen(false)}>
-              Contact
-            </a>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
-  );
+			{/* Contact button */}
+			<div className="hidden md:flex ml-6">
+				<button
+					onClick={onClick}
+					className="relative px-4 py-2 text-white font-light bg-transparent"
+					style={{
+						border: "1px solid transparent",
+						borderImage:
+							"linear-gradient(263deg, #FFFFFF 0%, #5C76B5 50%, #D1686F 100%)",
+						borderImageSlice: 1,
+					}}
+				>
+					CONTÁCTANOS
+				</button>
+			</div>
+
+			{/* Mobile Hamburger */}
+			<div className="md:hidden flex items-center gap-2 p-2 rounded">
+				<Hamburger
+					toggled={isOpen}
+					onToggle={setIsOpen}
+					color="#FFFFFF"
+					size={28}
+					direction="right"
+					duration={0.4}
+					rounded
+					label="Show menu"
+				/>
+			</div>
+		</div>
+	);
+}
+
+function MobileMenu({
+	isOpen,
+	setIsOpen,
+}: {
+	isOpen: boolean;
+	setIsOpen: (value: boolean) => void;
+}) {
+	return (
+		<AnimatePresence>
+			{isOpen && (
+				<motion.div
+					initial={{ opacity: 0, y: -20 }}
+					animate={{ opacity: 1, y: 0 }}
+					exit={{ opacity: 0, y: 20 }}
+					transition={{ duration: 0.25 }}
+					className="fixed top-28 left-0 w-full bg-black py-6 z-30 flex flex-col items-center space-y-4 text-white text-xl"
+				>
+					<NavLink
+						href="#about"
+						onClick={() => setIsOpen(false)}
+						className="hover:underline"
+					>
+						Nosotros
+					</NavLink>
+					<NavLink
+						href="/proteccion-personal"
+						onClick={() => setIsOpen(false)}
+						className="hover:underline"
+					>
+						Equipo de Protección Personal
+					</NavLink>
+					<NavLink
+						href="/estabilizacion"
+						onClick={() => setIsOpen(false)}
+						className="hover:underline"
+					>
+						Equipo de Estabilización
+					</NavLink>
+					{/* <NavLink
+						href="/rescate-vehicular"
+						onClick={() => setIsOpen(false)}
+						className="hover:underline"
+					>
+						Equipo de Rescate Vehicular
+					</NavLink> */}
+					<NavLink
+						href="/hazmat"
+						onClick={() => setIsOpen(false)}
+						className="hover:underline"
+					>
+						Equipo Hazmat
+					</NavLink>
+					<NavLink
+						href="#contact"
+						onClick={() => setIsOpen(false)}
+						className="hover:underline"
+					>
+						Contacto
+					</NavLink>
+				</motion.div>
+			)}
+		</AnimatePresence>
+	);
+}
+
+export default function Header() {
+	const [isOpen, setIsOpen] = useState(false);
+	const [scrolled, setScrolled] = useState(false);
+
+	const handleClick = () => {
+		window.location.href = "mailto:contacto@lhopital-fr.mx";
+	};
+
+	useEffect(() => {
+		const handleScroll = () => {
+			setScrolled(window.scrollY > 20);
+		};
+
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
+
+	return (
+		<>
+			<MobileContactBar onClick={handleClick} />
+
+			<header
+				className={`
+                    fixed left-0 w-full z-40 transition-all duration-300 ease-in-out flex items-center justify-between px-6 md:px-20
+                        ${
+						scrolled || isOpen
+							? "bg-black md:bg-black md:h-20 md:shadow-lg"
+							: "bg-transparent md:bg-transparent md:h-24"
+						}
+                    h-20 md:top-0 top-10
+                `}
+			>
+				<HeaderContent
+					isOpen={isOpen}
+					setIsOpen={setIsOpen}
+					onClick={handleClick}
+                    scrolled={scrolled}
+				/>
+			</header>
+
+			<MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+		</>
+	);
 }

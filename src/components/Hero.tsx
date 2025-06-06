@@ -18,7 +18,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[#172E6E]/60 z-0" />
 
       {/* Top-left image (desktop only) */}
-      <div className="hidden md:block absolute top-16 left-2 z-20">
+      <div className="hidden md:block absolute top-28 left-8 z-20">
         <Image
           src="/letters.png"
           alt="Desktop Floating Image"
