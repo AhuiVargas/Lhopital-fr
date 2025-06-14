@@ -5,7 +5,7 @@ import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <div className="-mt-20">
+    <div className="">
       <Hero />
       <Reveal><Content /></Reveal>
       <Reveal><Contact /></Reveal>

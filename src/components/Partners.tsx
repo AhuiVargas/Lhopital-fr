@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const partners = [
   { name: "Trelleborg", src: "/partners/trelleborg-logo.svg", href: "/hazmat" },
-  { name: "Sava", src: "/partners/Sava.png", href: "/estabilizacion" },
+  { name: "Sava", src: "/partners/Sava.png", href: "/rescate" },
   { name: "PGI", src: "/partners/PGI-logo.svg", href: "/proteccion-personal" },
   { name: "Fireline", src: "/partners/fireline-logo.svg", href: "/proteccion-personal" },
   { name: "BarriAire", src: "/partners/barriaire-logo.svg", href: "/proteccion-personal" },
