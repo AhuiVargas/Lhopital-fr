@@ -1,5 +1,5 @@
 import Reveal from "@/components/Reveal";
-import Hero from "@/components/hero";
+import Hero from "@/components/Hero";
 import Content from "@/components/Content";
 import Contact from "@/components/Contact";
 import Partners from "@/components/Partners";
