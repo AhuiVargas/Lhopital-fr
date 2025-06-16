@@ -1,11 +1,12 @@
 //   <p>Trelleborg</p>
 //   <p>Salva</p>
 
+import FeatureIntro from "@/components/FeatureIntro";
 import HeroContainer from "@/components/HeroContainer";
 
 export default function Rescue() {
 	return (
-		<section>
+		<>
 			<HeroContainer title="Rescate Vehicular" imageSrc="/banners/rescate.jpg">
 				<p>
 					Contamos con equipos para las diferentes especialidades que atienden
@@ -13,13 +14,15 @@ export default function Rescue() {
 					rescate en estructuras colapsadas (USAR) y recuperación de vehículos
 					pesados y comerciales.
 				</p>
-				<br />
-				<p>
-					Todos nuestros equipos con las certificaciones más importantes a nivel
-					mundial como NFPA y EN que garantizan el buen funcionamiento y
-					rendimiento de los equipos aún en los escenarios más complejos.
-				</p>
 			</HeroContainer>
-		</section>
+			<FeatureIntro
+				title="Todos nuestros equipos cuentan con las certificaciones más importantes a nivel
+					mundial"
+				subtitle="como NFPA y EN que garantizan el buen funcionamiento y
+					rendimiento de los equipos aún en los escenarios más complejos."
+				imageSrc="/items/rescate.jpg"
+				alt="Rescate Item"
+			/>
+		</>
 	);
 }
