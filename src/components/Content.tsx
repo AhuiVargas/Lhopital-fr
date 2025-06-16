@@ -1,7 +1,5 @@
 'use client'
 
-import Partners from "./Partners";
-
 export default function Content() {
   return (
     <>
@@ -11,8 +9,6 @@ export default function Content() {
           Lhopital-FR is committed to providing top-tier emergency and rescue services with modern equipment and expert personnel.
         </p>
       </section>
-
-     <Partners />
     </>
   );
 }
