@@ -20,7 +20,7 @@ export default function FeatureIntro({
 }: FeatureIntroProps) {
 	return (
 		<section className="w-full bg-white py-16 px-6 md:px-20">
-			<div className="max-w-7xl mx-auto flex flex-col md:grid md:grid-cols-2 gap-10 items-center">
+			<div className="max-w-7xl mx-auto flex flex-col md:grid md:grid-cols-2 items-center">
 				{/* Left: Text + Desktop Buttons */}
 				<div className="flex flex-col items-start text-left max-w-xl w-full">
 					<h2 className="text-3xl md:text-5xl font-bold text-[#172E6E] mb-4">

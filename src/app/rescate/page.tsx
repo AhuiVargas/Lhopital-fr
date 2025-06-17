@@ -6,9 +6,7 @@ import HeroContainer from "@/components/HeroContainer";
 
 export default function Rescue() {
 	const catalogOptions = [
-		{ label: "Catálogo BarriAire-Carbon", file: "/catalogues/pgi-hood-carbon.pdf" },
-		{ label: "Catálogo BarriAire-Gold", file: "/catalogues/pgi-hood-gold.pdf" },
-		{ label: "Catálogo PGI-Fireline-Suits", file: "/catalogues/pgi-suits.pdf" },
+		{ label: "Catálogo PGI Rescate", file: "/catalogues/pgi-rescue.pdf" },
 	];
 
 	return (
