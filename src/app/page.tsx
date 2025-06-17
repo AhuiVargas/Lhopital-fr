@@ -5,12 +5,18 @@ import Contact from "@/components/Contact";
 import Partners from "@/components/Partners";
 
 export default function Home() {
-  return (
-    <div className="">
-      <Hero />
-      <Reveal><Content /></Reveal>
-      <Reveal><Partners /></Reveal>
-      <Reveal><Contact /></Reveal>
-    </div>
-  );
+	return (
+		<div className="">
+			<Hero />
+			<Reveal>
+				<Content />
+			</Reveal>
+			<Reveal>
+				<Partners />
+			</Reveal>
+			<Reveal>
+				<Contact />
+			</Reveal>
+		</div>
+	);
 }
