@@ -2,13 +2,13 @@
 //   <p>Salva</p>
 
 import FeatureIntro from "@/components/FeatureIntro";
+import FeatureAnimated from "@/components/FeatureAnimated";
 import HeroContainer from "@/components/HeroContainer";
 
 export default function Hazmat() {
-
-  const catalogOption = [
-    { label: "Catálogo Hazmat PGI", file: "/catalogues/pgi-rescue.pdf" },
-  ];
+	const catalogOption = [
+		{ label: "Catálogo Hazmat PGI", file: "/catalogues/pgi-rescue.pdf" },
+	];
 
 	return (
 		<>
@@ -24,8 +24,31 @@ export default function Hazmat() {
 				subtitle=""
 				imageSrc="/items/hazmat.png"
 				alt="Sava-bags"
-                catalogOption={catalogOption}
+				catalogOption={catalogOption}
 			/>
+			<section className="w-full bg-white text-red-600 py-20 px-6 md:px-20 ">
+                <h1 className="text-3xl md:text-5xl font-bold text-center mb-10">EQUIPOS ESPECIALIZADOS EN:</h1>
+				<FeatureAnimated
+					direction="left"
+					title="Contención de materiales"
+					description="Nuestros productos están diseñados para minimizar el riesgo ambiental en situaciones críticas."
+					imageSrc="/banners/rescate.jpg"
+				/>
+
+				<FeatureAnimated
+					direction="right"
+					title="Protección del usuario"
+					description="Equipos especializados para garantizar la seguridad en todo momento."
+					imageSrc="/banners/rescate.jpg"
+				/>
+
+				<FeatureAnimated
+					direction="left"
+					title="Certificación internacional"
+					description="Cumplimos con los más altos estándares globales en calidad y rendimiento."
+					imageSrc="/banners/rescate.jpg"
+				/>
+			</section>
 		</>
 	);
 }

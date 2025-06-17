@@ -19,7 +19,7 @@ export default function FeatureIntro({
 	catalogOption = [],
 }: FeatureIntroProps) {
 	return (
-		<section className="w-full bg-white py-16 px-6 md:px-20">
+		<section className="w-full bg-[#FAF9F6] py-16 px-6 md:px-20">
 			<div className="max-w-7xl mx-auto flex flex-col md:grid md:grid-cols-2 items-center">
 				{/* Left: Text + Desktop Buttons */}
 				<div className="flex flex-col items-start text-left max-w-xl w-full">
