@@ -5,6 +5,11 @@ import FeatureIntro from "@/components/FeatureIntro";
 import HeroContainer from "@/components/HeroContainer";
 
 export default function Hazmat() {
+
+  const catalogOption = [
+    { label: "Catálogo Hazmat PGI", file: "/catalogues/pgi-rescue.pdf" },
+  ];
+
 	return (
 		<>
 			<HeroContainer title="HazMat" imageSrc="/banners/hazmat.jpg">
@@ -19,6 +24,7 @@ export default function Hazmat() {
 				subtitle=""
 				imageSrc="/items/hazmat.png"
 				alt="Sava-bags"
+                catalogOption={catalogOption}
 			/>
 		</>
 	);

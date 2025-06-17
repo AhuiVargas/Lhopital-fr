@@ -2,6 +2,13 @@ import FeatureIntro from "@/components/FeatureIntro";
 import HeroContainer from "@/components/HeroContainer";
 
 export default function PersonalProtection() {
+
+    const catalogOptions = [
+        { label: "Catálogo BarriAire-Carbon", file: "/catalogues/pgi-hood-carbon.pdf" },
+        { label: "Catálogo BarriAire-Gold", file: "/catalogues/pgi-hood-gold.pdf" },
+        { label: "Catálogo PGI-Fireline-Suits", file: "/catalogues/pgi-suits.pdf" },
+    ]
+
 	return (
 		<>
 			<HeroContainer
@@ -20,6 +27,7 @@ export default function PersonalProtection() {
 				subtitle="(National Fire Protection Association), garantizando la seguridad y calidad de los equipos."
 				imageSrc="/items/pp.png"
 				alt="Protección Personal item"
+                catalogOption={catalogOptions}
 			/>
 		</>
 	);
