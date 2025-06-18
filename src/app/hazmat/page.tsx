@@ -7,7 +7,7 @@ import HeroContainer from "@/components/HeroContainer";
 
 export default function Hazmat() {
 	const catalogOption = [
-		{ label: "Catálogo Hazmat PGI", file: "/catalogues/pgi-rescue.pdf" },
+		{ label: "Catálogo Hazmat PGI", file: "/catalogues/rescue-catalog.pdf" },
 	];
 
 	return (
@@ -30,9 +30,12 @@ export default function Hazmat() {
                 <h1 className="text-3xl md:text-5xl font-bold text-center mb-10">EQUIPOS ESPECIALIZADOS EN:</h1>
 				<FeatureAnimated
 					direction="left"
-					title="Contención de materiales"
-					description="Nuestros productos están diseñados para minimizar el riesgo ambiental en situaciones críticas."
-					imageSrc="/banners/rescate.jpg"
+					title="Equipo destinado a la fuga de sustancias en vías y espacios públicos"
+					description="así como en la industria del petróleo, química y gas líquido. 
+                        Tiene aplicaciones para uso en establecimientos de procesamientos químicos, refinerías, 
+                        establecimientos para el proceso de gas líquido, terminales de gas, plataformas de investigación, 
+                        perforación, transporte intercontinental, ferroviario y tuberías."
+					imageSrc="/features/hazmat-sealing.jpg"
 				/>
 
 				<FeatureAnimated

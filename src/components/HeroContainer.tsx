@@ -32,7 +32,7 @@ export default function HeroContainer({
 				<div className="w-full md:w-1/2 h-full flex items-center justify-start" />
 
 				{/* Right-side content */}
-				<div className="w-full md:w-1/2 h-full flex flex-col justify-center items-start text-white">
+				<div className="w-full md:w-1/2 h-full flex flex-col justify-center text-justify text-white">
 					<h1 className="text-4xl md:text-6xl font-bold mb-4">{title}</h1>
 					<div className="text-lg md:text-2xl font-light max-w-xl">
 						{children}

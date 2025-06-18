@@ -107,7 +107,7 @@ export default function CTAButton({
 						<button
 							key={option.file}
 							onClick={() => handleCatalogClick(option.file)}
-							className="w-full px-4 py-2 text-left hover:bg-[#F2F2F2] transition-colors text-lg font-medium"
+							className="w-full px-4 py-2 text-left hover:bg-[#F2F2F2] transition-colors text-sm"
 						>
 							{option.label}
 						</button>

@@ -6,12 +6,12 @@ import HeroContainer from "@/components/HeroContainer";
 
 export default function Rescue() {
 	const catalogOptions = [
-		{ label: "Catálogo PGI Rescate", file: "/catalogues/pgi-rescue.pdf" },
+		{ label: "Catálogo Rescate", file: "/catalogues/rescue-catalog.pdf" },
 	];
 
 	return (
 		<>
-			<HeroContainer title="Rescate Vehicular" imageSrc="/banners/rescate.jpg">
+			<HeroContainer title="Rescate Técnico" imageSrc="/banners/rescate.jpg">
 				<p>
 					Contamos con equipos para las diferentes especialidades que atienden
 					los profesionales. Equipos para rescate vehicular liviano y pesado,
@@ -22,7 +22,7 @@ export default function Rescue() {
 			<FeatureIntro
 				title="Todos nuestros equipos cuentan con las certificaciones más importantes a nivel mundial"
 				subtitle="como NFPA y EN que garantizan el buen funcionamiento y rendimiento de los equipos aún en los escenarios más complejos."
-				imageSrc="/items/rescate.jpg"
+				imageSrc="/items/rescate.png"
 				alt="Rescate Item"
 				catalogOption={catalogOptions}
 			/>
