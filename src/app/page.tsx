@@ -1,8 +1,9 @@
 import Reveal from "@/components/Reveal";
 import Hero from "@/components/Hero";
 import Content from "@/components/Content";
-import Contact from "@/components/Contact";
+// import Contact from "@/components/Contact";
 import Partners from "@/components/Partners";
+import EquipmentShowcase from "@/components/EquipmentShowcase";
 
 export default function Home() {
 	return (
@@ -11,12 +12,15 @@ export default function Home() {
 			<Reveal>
 				<Content />
 			</Reveal>
+            <Reveal>
+                <EquipmentShowcase />
+            </Reveal>
 			<Reveal>
 				<Partners />
 			</Reveal>
-			<Reveal>
+			{/* <Reveal>
 				<Contact />
-			</Reveal>
+			</Reveal> */}
 		</div>
 	);
 }
