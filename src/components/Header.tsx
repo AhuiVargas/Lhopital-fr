@@ -78,7 +78,7 @@ function HeaderContent({
 			{/* Desktop Nav */}
 			<div className="hidden md:flex items-center justify-center flex-1 text-xl">
 				<nav className="flex items-center space-x-10 text-white relative mx-auto">
-					<NavLink href="#about" className="hover:underline">
+					<NavLink href="/nosotros" className="hover:underline">
 						Nosotros
 					</NavLink>
 
@@ -159,7 +159,7 @@ function MobileMenu({
 					className="fixed top-28 left-0 w-full bg-black py-6 z-30 flex flex-col items-center space-y-4 text-white text-xl"
 				>
 					<NavLink
-						href="#about"
+						href="/nosotros"
 						onClick={() => setIsOpen(false)}
 						className="hover:underline"
 					>

@@ -1,6 +1,6 @@
 import Reveal from "@/components/Reveal";
 import Hero from "@/components/Hero";
-import Content from "@/components/Content";
+// import Content from "@/components/Content";
 // import Contact from "@/components/Contact";
 import Partners from "@/components/Partners";
 import EquipmentShowcase from "@/components/EquipmentShowcase";
@@ -9,9 +9,9 @@ export default function Home() {
 	return (
 		<div className="">
 			<Hero />
-			<Reveal>
+			{/* <Reveal>
 				<Content />
-			</Reveal>
+			</Reveal> */}
             <Reveal>
                 <EquipmentShowcase />
             </Reveal>
