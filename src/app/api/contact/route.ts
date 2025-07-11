@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { ContactEmail } from "@/components/ContactEmail";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-
 const submissions: Record<string, number> = {};
 
 export async function POST(req: Request) {
@@ -33,7 +33,7 @@ export async function POST(req: Request) {
 		);
 	}
 
-	// Decide which 'from' email to use
+	// Sender logic
 	const fromEmail =
 		process.env.RESEND_FROM_EMAIL_VERIFIED && process.env.RESEND_DOMAIN_VERIFIED === "true"
 			? process.env.RESEND_FROM_EMAIL_VERIFIED
@@ -44,15 +44,7 @@ export async function POST(req: Request) {
 			from: fromEmail!,
 			to: [process.env.RESEND_TO_EMAIL!],
 			subject: subject || "Nuevo mensaje desde el formulario de contacto",
-			html: `
-        <h2>Nuevo mensaje de contacto</h2>
-        <p><strong>Nombre:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Teléfono:</strong> ${phone}</p>
-        ${subject ? `<p><strong>Asunto:</strong> ${subject}</p>` : ""}
-        <p><strong>Mensaje:</strong></p>
-        <p>${message.replace(/\n/g, "<br>")}</p>
-      `,
+			react: ContactEmail({ name, email, phone, subject, message }),
 		});
 
 		if (result.error) {
@@ -68,7 +60,8 @@ export async function POST(req: Request) {
 		return NextResponse.json({ success: true, message: "Mensaje enviado correctamente." });
 	} catch (error: unknown) {
 		console.error("Error inesperado:", error);
-		const message = error instanceof Error ? error.message : "Hubo un error al enviar el mensaje.";
+		const message =
+			error instanceof Error ? error.message : "Hubo un error al enviar el mensaje.";
 		return NextResponse.json({ success: false, message }, { status: 500 });
 	}
 }
