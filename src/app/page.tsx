@@ -12,9 +12,9 @@ export default function Home() {
 			{/* <Reveal>
 				<Content />
 			</Reveal> */}
-            <Reveal>
+            {/* <Reveal> */}
                 <EquipmentShowcase />
-            </Reveal>
+            {/* </Reveal> */}
 			<Reveal>
 				<Partners />
 			</Reveal>

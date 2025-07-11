@@ -113,7 +113,7 @@ function HeaderContent({
 						)}
 					</div>
 
-					<NavLink href="#contact" className="hover:underline">
+					<NavLink href="/contacto" className="hover:underline">
 						Contacto
 					</NavLink>
 				</nav>
@@ -187,7 +187,7 @@ function MobileMenu({
 						Equipo Hazmat
 					</NavLink>
 					<NavLink
-						href="#contact"
+						href="/contacto"
 						onClick={() => setIsOpen(false)}
 						className="hover:underline"
 					>
