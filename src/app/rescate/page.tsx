@@ -1,6 +1,3 @@
-//   <p>Trelleborg</p>
-//   <p>Salva</p>
-
 import FeatureAnimated from "@/components/FeatureAnimated";
 import FeatureIntro from "@/components/FeatureIntro";
 import HeroContainer from "@/components/HeroContainer";
@@ -35,7 +32,7 @@ export default function Rescue() {
 					direction="left"
 					title="Equipo diseñado con enfoque especializado"
 					description="de acuerdo con las necesidades de los usuarios y de las operaciones de rescate, 
-                        fabricados con alta tecnología bajo los requerimientos de NFPA 1936, EN 13731 y EN 13204."
+						fabricados con alta tecnología bajo los requerimientos de NFPA 1936, EN 13731 y EN 13204."
 					imageSrc="/features/rescate1.jpg"
 				/>
 

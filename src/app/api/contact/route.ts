@@ -12,7 +12,10 @@ export async function POST(req: Request) {
 	// Rate limit per IP
 	if (submissions[ip] && now - submissions[ip] < 60 * 1000) {
 		return NextResponse.json(
-			{ success: false, message: "Por favor espera antes de enviar otro mensaje." },
+			{
+				success: false,
+				message: "Por favor espera antes de enviar otro mensaje.",
+			},
 			{ status: 429 }
 		);
 	}
@@ -28,14 +31,18 @@ export async function POST(req: Request) {
 	// Basic validation
 	if (!name || !email || !phone || !message) {
 		return NextResponse.json(
-			{ success: false, message: "Por favor completa todos los campos obligatorios." },
+			{
+				success: false,
+				message: "Por favor completa todos los campos obligatorios.",
+			},
 			{ status: 400 }
 		);
 	}
 
 	// Sender logic
 	const fromEmail =
-		process.env.RESEND_FROM_EMAIL_VERIFIED && process.env.RESEND_DOMAIN_VERIFIED === "true"
+		process.env.RESEND_FROM_EMAIL_VERIFIED &&
+		process.env.RESEND_DOMAIN_VERIFIED === "true"
 			? process.env.RESEND_FROM_EMAIL_VERIFIED
 			: process.env.RESEND_FROM_EMAIL_FALLBACK;
 
@@ -57,11 +64,16 @@ export async function POST(req: Request) {
 
 		submissions[ip] = now;
 
-		return NextResponse.json({ success: true, message: "Mensaje enviado correctamente." });
+		return NextResponse.json({
+			success: true,
+			message: "Mensaje enviado correctamente.",
+		});
 	} catch (error: unknown) {
 		console.error("Error inesperado:", error);
 		const message =
-			error instanceof Error ? error.message : "Hubo un error al enviar el mensaje.";
+			error instanceof Error
+				? error.message
+				: "Hubo un error al enviar el mensaje.";
 		return NextResponse.json({ success: false, message }, { status: 500 });
 	}
 }

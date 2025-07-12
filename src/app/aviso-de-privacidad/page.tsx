@@ -12,7 +12,7 @@ export default function AvisoDePrivacidad() {
 
 				<section className="mb-6">
 					<p>
-						En <strong>LHOPITAL S.A. DE C.V.</ strong> la información de nuestros
+						En <strong>LHOPITAL S.A. DE C.V.</strong> la información de nuestros
 						clientes y potenciales clientes es tratada de forma estrictamente
 						confidencial, por lo que hacemos un esfuerzo permanente para
 						salvaguardarla.

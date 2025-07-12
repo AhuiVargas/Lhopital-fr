@@ -39,7 +39,7 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
 				/>
 
 				{/* Modal content */}
-				<div className="relative bg-white w-full max-w-2xl p-6 rounded-lg shadow-xl">
+				<div className="relative bg-white w-full max-w-2xl p-6 shadow-xl">
 					{/* Close button */}
 					<button
 						onClick={onClose}
