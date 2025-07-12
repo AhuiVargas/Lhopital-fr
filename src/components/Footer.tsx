@@ -32,13 +32,13 @@ const Footer = () => {
 
 				{/* Column 3: Legal */}
 				<div className="flex flex-col gap-1 items-center md:items-end">
-					<p>Lhopital © Todos los derechos reservados</p>
 					<Link href="/aviso-de-privacidad" className="hover:underline">
 						Aviso de privacidad
 					</Link>
 					<Link href="/terminos-y-condiciones" className="hover:underline">
 						Términos y condiciones
 					</Link>
+					<p>Lhopital © Todos los derechos reservados</p>
 				</div>
 			</div>
 		</footer>
