@@ -17,7 +17,7 @@ export default function Rescue() {
 
 	return (
 		<>
-			<HeroContainer title="Rescate Técnico" imageSrc="/banners/rescate.webp">
+			<HeroContainer title="Rescate Técnico" imageSrc="https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/banners/rescate.webp">
 				<p>
 					Contamos con equipos para las diferentes especialidades que atienden
 					los profesionales. Equipos para rescate vehicular liviano y pesado,
