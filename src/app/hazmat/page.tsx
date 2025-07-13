@@ -16,7 +16,7 @@ export default function Hazmat() {
 
 	return (
 		<>
-			<HeroContainer title="HazMat" imageSrc="/banners/hazmat.webp">
+			<HeroContainer title="HazMat" imageSrc="https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/banners/hazmat.webp">
 				<p className="text-lg md:text-2xl font-light max-w-xl">
 					Diseñados específicamente para contención, recuperación y control de
 					materiales peligrosos, descontaminación, derrames químicos y
