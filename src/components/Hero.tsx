@@ -17,7 +17,7 @@ export default function Hero() {
 	const heroWordClass =
 		"font-[almaq] leading-none stroke-heavy text-transparent bg-clip-text drop-shadow-[4px_4px_0_#111]";
 	const heroWordStyle = {
-		backgroundImage: `url('/beige-texture.webp')`,
+		backgroundImage: `url('https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket//beige-texture.webp')`,
 		backgroundSize: "cover",
 		backgroundRepeat: "no-repeat",
 	};
@@ -25,7 +25,7 @@ export default function Hero() {
 	return (
 		<section className="relative w-full h-screen overflow-hidden text-white">
 			<video
-				src="/HeroVid.webm"
+				src="https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket//HeroVid.webm"
 				autoPlay
 				muted
 				loop
@@ -64,7 +64,7 @@ export default function Hero() {
 				{/* Logo */}
 				<div className="mb-4">
 					<Image
-						src="/LP-escudos/escudo_color.webp"
+						src="https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/LP-escudos/escudo_color.webp"
 						alt="Lhopital-FR logo"
 						width={250}
 						height={250}

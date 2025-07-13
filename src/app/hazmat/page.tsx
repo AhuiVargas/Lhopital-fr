@@ -11,12 +11,12 @@ import ContactoForm from "@/components/ContactForm";
 export default function Hazmat() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const catalogOption = [
-		{ label: "Catálogo Hazmat PGI", file: "/catalogues/rescue-catalog.pdf" },
+		{ label: "Catálogo Hazmat PGI", file: "https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/catalogues/rescue-catalog.pdf" },
 	];
 
 	return (
 		<>
-			<HeroContainer title="HazMat" imageSrc="/banners/hazmat.webp">
+			<HeroContainer title="HazMat" imageSrc="https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/banners/hazmat.webp">
 				<p className="text-lg md:text-2xl font-light max-w-xl">
 					Diseñados específicamente para contención, recuperación y control de
 					materiales peligrosos, descontaminación, derrames químicos y
@@ -26,7 +26,7 @@ export default function Hazmat() {
 			<FeatureIntro
 				title="La prioridad de nuestros equipos es proteger a los usuarios y prevenir situaciones de riesgo."
 				subtitle=""
-				imageSrc="/items/hazmat.webp"
+				imageSrc="https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/items/hazmat.webp"
 				alt="Sava-bags"
 				catalogOption={catalogOption}
 			/>
@@ -38,21 +38,21 @@ export default function Hazmat() {
 					direction="left"
 					title="Equipos y soluciones"
 					description="para la protección del medio ambiente personal de rescate y sociedad civil"
-					imageSrc="/features/hazmat1.webp"
+					imageSrc="https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/features/hazmat1.webp"
 				/>
 
 				<FeatureAnimated
 					direction="right"
 					title="Equipo destinado a la fuga de sustancias"
 					description="en vías y espacios públicos, así como en la industria del petróleo, química y gas líquido. Tiene aplicaciones para uso en establecimientos de procesamientos químicos, refinerías, establecimientos para el proceso de gas líquido, terminales de gas, plataformas de investigación, perforación, transporte intercontinental, ferroviario y tuberías. "
-					imageSrc="/features/hazmat2.webp"
+					imageSrc="https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/features/hazmat2.webp"
 				/>
 
 				<FeatureAnimated
 					direction="left"
 					title="Sellado de tanques perforados"
 					description="kits para sellados de tuberías y bolsas de drenaje con vacío que se adosan al lugar de uso mediante la aplicación de vacío, creado por una fuente de aire comprimido."
-					imageSrc="/features/hazmat3.webp"
+					imageSrc="https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/features/hazmat3.webp"
 				/>
 			</section>
 			<section className="bg-[#FAF9F6] px-6 py-10 text-center text-black">

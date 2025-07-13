@@ -24,15 +24,11 @@ export default function CTAButton({
 	const [open, setOpen] = useState(false);
 	const dropdownRef = useRef<HTMLDivElement>(null);
 
-	const handleCatalogClick = (file: string) => {
-		const link = document.createElement("a");
-		link.href = file;
-		link.download = file;
-		document.body.appendChild(link);
-		link.click();
-		document.body.removeChild(link);
-		setOpen(false);
-	};
+const handleCatalogClick = (file: string) => {
+	window.open(file, "_blank");
+	setOpen(false);
+};
+
 
 	const handleClick = () => {
 		if (isCatalogButton) {

@@ -41,7 +41,7 @@ function HeaderContent({
 			{/* Logo */}
 			<Link href="/" scroll className="z-10">
 				<Image
-					src="/LP-escudos/escudo_bw.webp"
+					src="https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/LP-escudos/escudo_bw.webp"
 					alt="Logo"
 					width={70}
 					height={70}
