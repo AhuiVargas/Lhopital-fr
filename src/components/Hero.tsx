@@ -17,7 +17,7 @@ export default function Hero() {
 	const heroWordClass =
 		"font-[almaq] leading-none stroke-heavy text-transparent bg-clip-text drop-shadow-[4px_4px_0_#111]";
 	const heroWordStyle = {
-		backgroundImage: `url('/beige-texture.jpg')`,
+		backgroundImage: `url('/beige-texture.webp')`,
 		backgroundSize: "cover",
 		backgroundRepeat: "no-repeat",
 	};
@@ -64,7 +64,7 @@ export default function Hero() {
 				{/* Logo */}
 				<div className="mb-4">
 					<Image
-						src="/LP-escudos/escudo_color.png"
+						src="/LP-escudos/escudo_color.webp"
 						alt="Lhopital-FR logo"
 						width={250}
 						height={250}

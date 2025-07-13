@@ -41,7 +41,7 @@ function HeaderContent({
 			{/* Logo */}
 			<Link href="/" scroll className="z-10">
 				<Image
-					src="/LP-escudos/escudo_bw.png"
+					src="/LP-escudos/escudo_bw.webp"
 					alt="Logo"
 					width={70}
 					height={70}

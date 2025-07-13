@@ -12,7 +12,7 @@ export default function Hazmat() {
 
 	return (
 		<>
-			<HeroContainer title="HazMat" imageSrc="/banners/hazmat.jpg">
+			<HeroContainer title="HazMat" imageSrc="/banners/hazmat.webp">
 				<p className="text-lg md:text-2xl font-light max-w-xl">
 					Diseñados específicamente para contención, recuperación y control de
 					materiales peligrosos, descontaminación, derrames químicos y
@@ -22,7 +22,7 @@ export default function Hazmat() {
 			<FeatureIntro
 				title="La prioridad de nuestros equipos es proteger a los usuarios y prevenir situaciones de riesgo."
 				subtitle=""
-				imageSrc="/items/hazmat.png"
+				imageSrc="/items/hazmat.webp"
 				alt="Sava-bags"
 				catalogOption={catalogOption}
 			/>
@@ -34,21 +34,21 @@ export default function Hazmat() {
 					direction="left"
 					title="Equipos y soluciones"
 					description="para la protección del medio ambiente personal de rescate y sociedad civil"
-					imageSrc="/features/hazmat1.jpg"
+					imageSrc="/features/hazmat1.webp"
 				/>
 
 				<FeatureAnimated
 					direction="right"
 					title="Equipo destinado a la fuga de sustancias"
 					description="en vías y espacios públicos, así como en la industria del petróleo, química y gas líquido. Tiene aplicaciones para uso en establecimientos de procesamientos químicos, refinerías, establecimientos para el proceso de gas líquido, terminales de gas, plataformas de investigación, perforación, transporte intercontinental, ferroviario y tuberías. "
-					imageSrc="/features/hazmat2.jpg"
+					imageSrc="/features/hazmat2.webp"
 				/>
 
 				<FeatureAnimated
 					direction="left"
 					title="Sellado de tanques perforados"
 					description="kits para sellados de tuberías y bolsas de drenaje con vacío que se adosan al lugar de uso mediante la aplicación de vacío, creado por una fuente de aire comprimido."
-					imageSrc="/features/hazmat3.jpg"
+					imageSrc="/features/hazmat3.webp"
 				/>
 			</section>
 		</>

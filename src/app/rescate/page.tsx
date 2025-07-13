@@ -9,7 +9,7 @@ export default function Rescue() {
 
 	return (
 		<>
-			<HeroContainer title="Rescate Técnico" imageSrc="/banners/rescate.jpg">
+			<HeroContainer title="Rescate Técnico" imageSrc="/banners/rescate.webp">
 				<p>
 					Contamos con equipos para las diferentes especialidades que atienden
 					los profesionales. Equipos para rescate vehicular liviano y pesado,
@@ -20,7 +20,7 @@ export default function Rescue() {
 			<FeatureIntro
 				title="Todos nuestros equipos cuentan con las certificaciones más importantes a nivel mundial"
 				subtitle="como NFPA y EN que garantizan el buen funcionamiento y rendimiento de los equipos aún en los escenarios más complejos."
-				imageSrc="/items/rescate.png"
+				imageSrc="/items/rescate.webp"
 				alt="Rescate Item"
 				catalogOption={catalogOptions}
 			/>
@@ -33,7 +33,7 @@ export default function Rescue() {
 					title="Equipo diseñado con enfoque especializado"
 					description="de acuerdo con las necesidades de los usuarios y de las operaciones de rescate, 
 						fabricados con alta tecnología bajo los requerimientos de NFPA 1936, EN 13731 y EN 13204."
-					imageSrc="/features/rescate1.jpg"
+					imageSrc="/features/rescate1.webp"
 				/>
 
 				<FeatureAnimated
@@ -47,7 +47,7 @@ export default function Rescue() {
 					direction="left"
 					title="Sistemas de estabilización"
 					description="primaria y secundaria para rescate en estructuras colapsadas, trincheras y espacios confinados"
-					imageSrc="/features/rescate3.jpg"
+					imageSrc="/features/rescate3.webp"
 				/>
 			</section>
 		</>

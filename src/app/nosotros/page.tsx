@@ -27,7 +27,7 @@ export default function NosotrosPage() {
 	];
 	return (
 		<>
-			<HeroContainer title="Nosotros" imageSrc="/banners/nosotros.png">
+			<HeroContainer title="Nosotros" imageSrc="/banners/nosotros.webp">
 				<p className="mb-4">
 					<strong>Lhopital FR</strong> es una empresa mexicana dedicada a
 					ofrecer soluciones integrales para profesionales en Protección Civil,
@@ -84,7 +84,7 @@ export default function NosotrosPage() {
 				{/* Background image + red overlay */}
 				<div className="absolute inset-0 -z-10">
 					<Image
-						src="/showcase/burntBrickWall.png"
+						src="/showcase/burntBrickWall.webp"
 						alt="Fondo de valores"
 						fill
 						className="object-cover"
