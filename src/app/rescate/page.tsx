@@ -28,7 +28,7 @@ export default function Rescue() {
 			<FeatureIntro
 				title="Todos nuestros equipos cuentan con las certificaciones más importantes a nivel mundial"
 				subtitle="como NFPA y EN que garantizan el buen funcionamiento y rendimiento de los equipos aún en los escenarios más complejos."
-				imageSrc="/items/rescate.webp"
+				imageSrc="https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/items/rescate.webp"
 				alt="Rescate Item"
 				catalogOption={catalogOptions}
 			/>
@@ -41,21 +41,21 @@ export default function Rescue() {
 					title="Equipo diseñado con enfoque especializado"
 					description="de acuerdo con las necesidades de los usuarios y de las operaciones de rescate, 
 						fabricados con alta tecnología bajo los requerimientos de NFPA 1936, EN 13731 y EN 13204."
-					imageSrc="/features/rescate1.webp"
+					imageSrc="https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/features/rescate1.webp"
 				/>
 
 				<FeatureAnimated
 					direction="right"
 					title="Equipos para recuperación"
 					description="de vehículos comerciales, vehículos de transporte y todo lo referente a rescate vehicular"
-					imageSrc="/features/rescate2.webp"
+					imageSrc="https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/features/rescate2.webp"
 				/>
 
 				<FeatureAnimated
 					direction="left"
 					title="Sistemas de estabilización"
 					description="primaria y secundaria para rescate en estructuras colapsadas, trincheras y espacios confinados"
-					imageSrc="/features/rescate3.webp"
+					imageSrc="https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/features/rescate3.webp"
 				/>
 			</section>
 			<section className="bg-[#FAF9F6] px-6 py-10 text-center text-black">

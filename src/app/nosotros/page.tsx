@@ -84,7 +84,7 @@ export default function NosotrosPage() {
 				{/* Background image + red overlay */}
 				<div className="absolute inset-0 -z-10">
 					<Image
-						src="/showcase/burntBrickWall.webp"
+						src="https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/showcase/burntBrickWall.webp"
 						alt="Fondo de valores"
 						fill
 						className="object-cover"

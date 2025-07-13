@@ -50,7 +50,7 @@ export default function EquipmentShowcase(): JSX.Element {
 			{/* Background */}
 			<div className="absolute inset-0 -z-10">
 				<Image
-					src="/showcase/burntBrickWall.webp"
+					src="https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/showcase/burntBrickWall.webp"
 					alt="Fondo equipos"
 					fill
 					className="object-cover"

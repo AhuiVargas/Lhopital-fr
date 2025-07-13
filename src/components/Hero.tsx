@@ -25,7 +25,7 @@ export default function Hero() {
 	return (
 		<section className="relative w-full h-screen overflow-hidden text-white">
 			<video
-				src="/HeroVid.webm"
+				src="https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket//HeroVid.webm"
 				autoPlay
 				muted
 				loop
@@ -64,7 +64,7 @@ export default function Hero() {
 				{/* Logo */}
 				<div className="mb-4">
 					<Image
-						src="/LP-escudos/escudo_color.webp"
+						src="https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/LP-escudos/escudo_color.webp"
 						alt="Lhopital-FR logo"
 						width={250}
 						height={250}
