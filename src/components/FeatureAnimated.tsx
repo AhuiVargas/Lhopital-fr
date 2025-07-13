@@ -29,7 +29,7 @@ export default function FeatureAnimated({
 					initial={{ opacity: 0, x: isLeft ? -100 : 100 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.6 }}
-					viewport={{ once: true, amount: 0.3, margin: "-150px" }}
+					viewport={{ once: true, amount: 0.3 }}
 					className={`relative z-0 order-1 ${
 						isLeft ? "md:order-1" : "md:order-2"
 					}`}
@@ -48,7 +48,7 @@ export default function FeatureAnimated({
 					initial={{ opacity: 0, x: isLeft ? 100 : -100 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.6 }}
-					viewport={{ once: true, amount: 0.3, margin: "-150px" }}
+					viewport={{ once: true, amount: 0.3 }}
 					className={`relative z-10 order-2 bg-[#F9FAFB] shadow-lg p-8 ${
 						isLeft ? "md:-ml-20 md:order-2" : "md:-mr-20 md:order-1"
 					}`}
