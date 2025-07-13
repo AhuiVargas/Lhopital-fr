@@ -4,25 +4,38 @@ import Image from "next/image";
 import Link from "next/link";
 
 const partners = [
-	{ name: "Trelleborg", src: "/partners/trelleborg-logo.svg", href: "/hazmat" },
-	{ name: "Sava", src: "/partners/Sava.webp", href: "/rescate" },
-	{ name: "PGI", src: "/partners/PGI-logo.svg", href: "/proteccion-personal" },
+	{
+		name: "Trelleborg",
+		src: "https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/partners/trelleborg-logo.svg",
+		href: "/hazmat",
+	},
+	{
+		name: "Sava",
+		src: "https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/partners/Sava.webp",
+		href: "/rescate",
+	},
+	{
+		name: "PGI",
+		src: "https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/partners/PGI-logo.svg",
+		href: "/proteccion-personal",
+	},
 	{
 		name: "Fireline",
-		src: "/partners/fireline-logo.svg",
+		src: "https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/partners/fireline-logo.svg",
 		href: "/proteccion-personal",
 	},
 	{
 		name: "BarriAire",
-		src: "/partners/barriaire-logo.svg",
+		src: "https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/partners/barriaire-logo.svg",
 		href: "/proteccion-personal",
 	},
 	{
 		name: "Cobra",
-		src: "/partners/cobra-logo.svg",
+		src: "https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/partners/cobra-logo.svg",
 		href: "/proteccion-personal",
 	},
 ];
+
 
 export default function Partners() {
 	return (

@@ -11,7 +11,7 @@ import ContactoForm from "@/components/ContactForm";
 export default function Hazmat() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const catalogOption = [
-		{ label: "Catálogo Hazmat PGI", file: "/catalogues/rescue-catalog.pdf" },
+		{ label: "Catálogo Hazmat PGI", file: "https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/catalogues/rescue-catalog.pdf" },
 	];
 
 	return (

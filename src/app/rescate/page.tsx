@@ -12,7 +12,7 @@ export default function Rescue() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	const catalogOptions = [
-		{ label: "Catálogo Rescate", file: "/catalogues/rescue-catalog.pdf" },
+		{ label: "Catálogo Rescate", file: "https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/catalogues/rescue-catalog.pdf" },
 	];
 
 	return (
