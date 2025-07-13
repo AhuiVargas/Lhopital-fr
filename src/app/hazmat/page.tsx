@@ -1,11 +1,15 @@
-//   <p>Trelleborg</p>
-//   <p>Salva</p>
+'use client'
 
 import FeatureIntro from "@/components/FeatureIntro";
 import FeatureAnimated from "@/components/FeatureAnimated";
 import HeroContainer from "@/components/HeroContainer";
+import CTAButton from "@/components/CTAButton";
+import Modal from "@/components/Modal";
+import { useState } from "react";
+import ContactoForm from "@/components/ContactForm";
 
 export default function Hazmat() {
+	const [isModalOpen, setIsModalOpen] = useState(false);
 	const catalogOption = [
 		{ label: "Catálogo Hazmat PGI", file: "/catalogues/rescue-catalog.pdf" },
 	];
@@ -51,6 +55,22 @@ export default function Hazmat() {
 					imageSrc="/features/hazmat3.webp"
 				/>
 			</section>
+			<section className="bg-[#FAF9F6] px-6 py-10 text-center text-black">
+				<div className="max-w-xl mx-auto">
+					<p className="text-lg md:text-xl leading-relaxed mb-8 text-justify">
+						Le invitamos a conocer más sobre nuestros servicios y soluciones
+						contactando a nuestros especialistas que con gusto atenderán su
+						petición.
+					</p>
+					<CTAButton onClick={() => setIsModalOpen(true)} hovered>
+						CONTÁCTANOS
+					</CTAButton>
+				</div>
+			</section>
+
+			<Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+				<ContactoForm />
+			</Modal>
 		</>
 	);
 }

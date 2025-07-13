@@ -1,8 +1,15 @@
+"use client";
+
+import ContactoForm from "@/components/ContactForm";
+import CTAButton from "@/components/CTAButton";
 import FeatureAnimated from "@/components/FeatureAnimated";
 import FeatureIntro from "@/components/FeatureIntro";
 import HeroContainer from "@/components/HeroContainer";
+import Modal from "@/components/Modal";
+import { useState } from "react";
 
 export default function PersonalProtection() {
+	const [isModalOpen, setIsModalOpen] = useState(false);
 	const catalogOptions = [
 		{
 			label: "Catálogo BarriAire-Carbon",
@@ -57,6 +64,22 @@ export default function PersonalProtection() {
 					imageSrc="/features/proteccion3.webp"
 				/>
 			</section>
+			<section className="bg-[#FAF9F6] px-6 py-10 text-center text-black">
+				<div className="max-w-xl mx-auto">
+					<p className="text-lg md:text-xl leading-relaxed mb-8 text-justify">
+						Le invitamos a conocer más sobre nuestros servicios y soluciones
+						contactando a nuestros especialistas que con gusto atenderán su
+						petición.
+					</p>
+					<CTAButton onClick={() => setIsModalOpen(true)} hovered>
+						CONTÁCTANOS
+					</CTAButton>
+				</div>
+			</section>
+
+			<Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+				<ContactoForm />
+			</Modal>
 		</>
 	);
 }

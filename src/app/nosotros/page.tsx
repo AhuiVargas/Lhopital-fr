@@ -113,7 +113,7 @@ export default function NosotrosPage() {
 
 			<section className="bg-[#FAF9F6] px-6 py-20 text-center text-black">
 				<div className="max-w-xl mx-auto">
-					<p className="text-lg md:text-xl leading-relaxed mb-8">
+					<p className="text-lg md:text-xl leading-relaxed mb-8 text-justify">
 						Le invitamos a conocer más sobre nuestros servicios y soluciones
 						contactando a nuestros especialistas que con gusto atenderán su
 						petición.
