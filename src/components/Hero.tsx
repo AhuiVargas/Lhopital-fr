@@ -17,7 +17,7 @@ export default function Hero() {
 	const heroWordClass =
 		"font-[almaq] leading-none stroke-heavy text-transparent bg-clip-text drop-shadow-[4px_4px_0_#111]";
 	const heroWordStyle = {
-		backgroundImage: `url('/beige-texture.webp')`,
+		backgroundImage: `url('https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket//beige-texture.webp')`,
 		backgroundSize: "cover",
 		backgroundRepeat: "no-repeat",
 	};
