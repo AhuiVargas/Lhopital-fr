@@ -10,7 +10,7 @@ const Footer = () => {
 				{/* Column 1: Logo */}
 				<div className="flex flex-col items-center md:items-start">
 					<Image
-						src="/LP-logos/horiz_oscuro_bw.png"
+						src="/LP-logos/horiz_oscuro_bw.webp"
 						alt="Lhopital Logo"
 						width={200}
 						height={40}

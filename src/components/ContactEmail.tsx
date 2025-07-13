@@ -52,7 +52,7 @@ export function ContactEmail({
 					{/* <Section style={{ textAlign: "center", marginBottom: "24px" }}>
             <a href="https://lhopital-fr.mx" target="_blank">
               <Img
-                src="https://lhopital-fr.mx/logo-horizontal.png" // uncomment when hosted logo
+                src="https://lhopital-fr.mx/logo-horizontal.webp" // uncomment when hosted logo
                 alt="Lhopital Logo"
                 width="180"
                 style={{ margin: "0 auto" }}

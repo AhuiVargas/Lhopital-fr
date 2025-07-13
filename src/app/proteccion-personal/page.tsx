@@ -1,8 +1,15 @@
+"use client";
+
+import ContactoForm from "@/components/ContactForm";
+import CTAButton from "@/components/CTAButton";
 import FeatureAnimated from "@/components/FeatureAnimated";
 import FeatureIntro from "@/components/FeatureIntro";
 import HeroContainer from "@/components/HeroContainer";
+import Modal from "@/components/Modal";
+import { useState } from "react";
 
 export default function PersonalProtection() {
+	const [isModalOpen, setIsModalOpen] = useState(false);
 	const catalogOptions = [
 		{
 			label: "Catálogo BarriAire-Carbon",
@@ -16,7 +23,7 @@ export default function PersonalProtection() {
 		<>
 			<HeroContainer
 				title="Protección Personal"
-				imageSrc="/banners/proteccion-personal.jpg"
+				imageSrc="/banners/proteccion-personal.webp"
 			>
 				<p className="text-lg md:text-2xl font-light max-w-xl">
 					El equipo de protección personal es la parte más importante para
@@ -28,7 +35,7 @@ export default function PersonalProtection() {
 			<FeatureIntro
 				title="Todos nuestros equipos cuentan con certificación NFPA "
 				subtitle="(National Fire Protection Association), garantizando la seguridad y calidad de los equipos."
-				imageSrc="/items/pp.png"
+				imageSrc="/items/pp.webp"
 				alt="Protección Personal item"
 				catalogOption={catalogOptions}
 			/>
@@ -40,23 +47,39 @@ export default function PersonalProtection() {
 					direction="left"
 					title="Protección para bomberos y rescatistas"
 					description="que garanticen su seguridad con base en su especialidad bajo los requerimientos de la NFPA 1971, 1977, 1975, 1951, 1999."
-					imageSrc="/features/proteccion1.jpg"
+					imageSrc="/features/proteccion1.webp"
 				/>
 
 				<FeatureAnimated
 					direction="right"
 					title="Equipo multipropósito con doble certificación"
 					description="para actividades de rescate técnico e incendios forestales, ergonómicos y seguros para los usuarios que atienden más de una especialidad."
-					imageSrc="/features/proteccion2.jpg"
+					imageSrc="/features/proteccion2.webp"
 				/>
 
 				<FeatureAnimated
 					direction="left"
 					title="Equipos personalizados"
 					description="desarrollados y fabricados de acuerdo a las necesidades específicas de los cuerpos de rescate y emergencias"
-					imageSrc="/features/proteccion3.jpeg"
+					imageSrc="/features/proteccion3.webp"
 				/>
 			</section>
+			<section className="bg-[#FAF9F6] px-6 py-10 text-center text-black">
+				<div className="max-w-xl mx-auto">
+					<p className="text-lg md:text-xl leading-relaxed mb-8 text-justify">
+						Le invitamos a conocer más sobre nuestros servicios y soluciones
+						contactando a nuestros especialistas que con gusto atenderán su
+						petición.
+					</p>
+					<CTAButton onClick={() => setIsModalOpen(true)} hovered>
+						CONTÁCTANOS
+					</CTAButton>
+				</div>
+			</section>
+
+			<Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+				<ContactoForm />
+			</Modal>
 		</>
 	);
 }
