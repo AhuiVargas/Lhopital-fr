@@ -29,7 +29,7 @@ export default function NosotrosPage() {
 		<>
 			<HeroContainer title="Nosotros" imageSrc="https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/banners/nosotros.webp">
 				<p className="mb-4">
-					<strong>Lhopital FR</strong> es una empresa mexicana dedicada a
+					<strong>Lhopital FR</strong> es una empresa líder dedicada a
 					ofrecer soluciones integrales para profesionales en Protección Civil,
 					Bomberos y Rescate con el objetivo de facilitar las tareas diarias de
 					las corporaciones dedicadas a proteger la integridad de la sociedad y

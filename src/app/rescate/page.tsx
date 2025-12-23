@@ -34,7 +34,7 @@ export default function Rescue() {
 			/>
 			<section className="w-full bg-white text-red-600 py-20 px-6 md:px-20 ">
 				<h1 className="text-3xl md:text-5xl font-bold text-center mb-10">
-					EQUIPOS ESPECIALIZADOS EN:
+					EQUIPOS ESPECIALIZADOS EN RESCATE TÉCNICO:
 				</h1>
 				<FeatureAnimated
 					direction="left"

@@ -32,7 +32,7 @@ export default function Hazmat() {
 			/>
 			<section className="w-full bg-white py-20 px-6 md:px-20 ">
 				<h1 className="text-3xl md:text-5xl text-red-600 font-bold text-center mb-10">
-					EQUIPOS ESPECIALIZADOS EN:
+					EQUIPOS HAZMAT ESPECIALIZADOS EN:
 				</h1>
 				<FeatureAnimated
 					direction="left"
