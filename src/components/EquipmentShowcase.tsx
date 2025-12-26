@@ -17,21 +17,21 @@ const items: ShowcaseItem[] = [
 		title: "EPP",
 		description:
 			"Equipos de protección personal para bomberos y rescatistas profesionales.",
-		image: "https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/showcase/pp.webp",
+		image: "/showcase/pp.webp",
 		url: "/proteccion-personal",
 	},
 	{
 		title: "RESCATE",
 		description:
 			"Equipo para rescate vehicular, rescate pesado, rescate en estructuras colapsadas y estabilización primaria y secundaría.",
-		image: "https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/showcase/rescate.webp",
+		image: "/showcase/rescate.webp",
 		url: "/rescate",
 	},
 	{
 		title: "HAZMAT",
 		description:
 			"Equipos para contención de materiales peligrosos y control de derrames.",
-		image: "https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/showcase/hazmat.webp",
+		image: "/showcase/hazmat.webp",
 		url: "/hazmat",
 	},
 ];
@@ -49,9 +49,9 @@ export default function EquipmentShowcase(): JSX.Element {
 		<section className="relative text-white py-20 px-6">
 			{/* Background */}
 			<div className="absolute inset-0 -z-10">
-				<Image
-					src="https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/showcase/burntBrickWall.webp"
-					alt="Fondo equipos"
+			<Image
+				src="/showcase/burntBrickWall.webp"
+				alt="Fondo equipos"
 					fill
 					className="object-cover"
 				/>

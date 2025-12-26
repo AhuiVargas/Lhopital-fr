@@ -2,7 +2,6 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ['nqtkjfgimpbdtfwigbpq.supabase.co'],
     formats: ['image/webp', 'image/avif'],
   },
   compress: true,
