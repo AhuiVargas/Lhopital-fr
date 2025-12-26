@@ -15,6 +15,7 @@ const Footer = () => {
 						width={200}
 						height={40}
 						className="h-auto"
+						unoptimized
 						priority
 					/>
 				</div>

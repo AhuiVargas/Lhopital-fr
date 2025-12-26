@@ -17,6 +17,7 @@ export default function PersonalProtection() {
 		},
 		{ label: "Catálogo BarriAire-Gold", file: "/catalogues/pgi-hood-gold.pdf" },
 		{ label: "Catálogo PGI-Fireline-Suits", file: "/catalogues/pgi-suits.pdf" },
+		{ label: "Catálogo HexArmor", file: "/catalogues/HEXARMOR-F&R.pdf" },
 	];
 
 	return (
@@ -35,7 +36,7 @@ export default function PersonalProtection() {
 			<FeatureIntro
 				title="Todos nuestros equipos cuentan con certificación NFPA "
 				subtitle="(National Fire Protection Association), garantizando la seguridad y calidad de los equipos."
-			imageSrc="/items/pp.webp"
+			imageSrc="/items/pp1.webp"
 			alt="Protección Personal item"
 				catalogOption={catalogOptions}
 			/>

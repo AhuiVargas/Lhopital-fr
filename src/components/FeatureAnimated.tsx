@@ -39,6 +39,7 @@ export default function FeatureAnimated({
 						alt={alt || title}
 						width={800}
 						height={600}
+						unoptimized
 						className="w-full h-auto object-cover max-w-full"
 					/>
 				</motion.div>
