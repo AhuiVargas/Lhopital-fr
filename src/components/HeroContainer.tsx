@@ -20,6 +20,7 @@ export default function HeroContainer({
 					src={imageSrc}
 					alt={title}
 					fill
+					unoptimized
 					className="object-cover w-full h-full"
 				/>
 			</div>

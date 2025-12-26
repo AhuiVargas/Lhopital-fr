@@ -82,18 +82,17 @@ export default function NosotrosPage() {
 
 		<section className="relative text-white px-6 py-20 overflow-hidden">
 			{/* Background image + red overlay */}
-			<div className="absolute inset-0 -z-10">
-				<Image
-					src="/showcase/burntBrickWall.webp"
-					alt="Fondo de valores"
-					fill
-					className="object-cover"
-					priority
-				/>
-				<div className="absolute inset-0 bg-[#b01f29]/50" />
-			</div>
-            
-            {/* Content */}
+		<div className="absolute inset-0 -z-10">
+			<Image
+				src="/showcase/burntBrickWall.webp"
+				alt="Fondo de valores"
+				fill
+				unoptimized
+				className="object-cover"
+				priority
+			/>
+			<div className="absolute inset-0 bg-[#b01f29]/50" />
+		</div>            {/* Content */}
 				<div className="max-w-6xl mx-auto relative z-10">
 					<h2 className="text-3xl font-bold text-center mb-12">Valores</h2>
 

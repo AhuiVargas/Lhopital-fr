@@ -47,18 +47,17 @@ export default function EquipmentShowcase(): JSX.Element {
 
 	return (
 		<section className="relative text-white py-20 px-6">
-			{/* Background */}
-			<div className="absolute inset-0 -z-10">
-			<Image
-				src="/showcase/burntBrickWall.webp"
-				alt="Fondo equipos"
-					fill
-					className="object-cover"
-				/>
-				<div className="absolute inset-0 bg-[#b01f29]/70" />
-			</div>
-
-			{/* Section Title */}
+		{/* Background */}
+		<div className="absolute inset-0 -z-10">
+		<Image
+			src="/showcase/burntBrickWall.webp"
+			alt="Fondo equipos"
+				fill
+				unoptimized
+				className="object-cover"
+			/>
+			<div className="absolute inset-0 bg-[#b01f29]/70" />
+		</div>			{/* Section Title */}
 			<motion.div
 				ref={sectionRef}
 				initial="hidden"
@@ -125,14 +124,13 @@ function Card({ item, delay }: { item: ShowcaseItem; delay: number }) {
 				<div className="flex flex-col shadow-lg overflow-hidden">
 					{/* Image */}
 					<div className="relative w-full h-[500px]">
-						<Image
-							src={item.image}
-							alt={item.title}
-							fill
-							className="object-cover object-center"
-						/>
-
-						{/* Overlay (desktop only) */}
+					<Image
+						src={item.image}
+						alt={item.title}
+						fill
+						unoptimized
+						className="object-cover object-center"
+					/>						{/* Overlay (desktop only) */}
 						<div className="hidden md:block absolute inset-4 z-10 overflow-hidden">
 							<div
 								className="absolute inset-0 bg-black/50 transition-all duration-500 ease-in-out"

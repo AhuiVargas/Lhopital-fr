@@ -68,6 +68,7 @@ export default function Hero() {
 					alt="Lhopital-FR logo"
 					width={250}
 					height={250}
+					unoptimized
 				/>
 			</div>
 

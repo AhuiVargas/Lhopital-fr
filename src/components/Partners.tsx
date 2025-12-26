@@ -56,6 +56,7 @@ export default function Partners() {
 								src={partner.src}
 								alt={partner.name}
 								fill
+								unoptimized
 								className="object-contain"
 								sizes="(max-width: 768px) 50vw, 150px"
 							/>

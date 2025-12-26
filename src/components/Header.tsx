@@ -45,6 +45,7 @@ function HeaderContent({
 					alt="Logo"
 					width={70}
 					height={70}
+					unoptimized
 				/>
 			</Link>
 

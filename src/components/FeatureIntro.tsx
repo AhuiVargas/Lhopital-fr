@@ -50,18 +50,17 @@ export default function FeatureIntro({
 					</div>
 				</div>
 
-				{/* Right: Image */}
-				<div className="w-full">
-					<Image
-						src={imageSrc}
-						alt={alt}
-						width={600}
-						height={400}
-						className="w-full h-auto object-cover"
-					/>
-				</div>
-
-				{/* Mobile Buttons */}
+			{/* Right: Image */}
+			<div className="w-full">
+				<Image
+					src={imageSrc}
+					alt={alt}
+					width={600}
+					height={400}
+					unoptimized
+					className="w-full h-auto object-cover"
+				/>
+			</div>				{/* Mobile Buttons */}
 				<div className="flex md:hidden w-full justify-center mt-4 gap-4 flex-wrap">
 					<CTAButton onClick={handleClick} hovered>
 						CONTÁCTANOS
