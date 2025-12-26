@@ -6,7 +6,7 @@ import Link from "next/link";
 const partners = [
 	{
 		name: "Trelleborg",
-		src: "/partners/trelleborg-logo.svg",
+		src: "/partners/trelleborg-logo.webp",
 		href: "/hazmat",
 	},
 	{
@@ -16,24 +16,29 @@ const partners = [
 	},
 	{
 		name: "PGI",
-		src: "/partners/PGI-logo.svg",
+		src: "/partners/PGI-logo.webp",
 		href: "/proteccion-personal",
 	},
 	{
 		name: "Fireline",
-		src: "/partners/fireline-logo.svg",
+		src: "/partners/fireline-logo.webp",
 		href: "/proteccion-personal",
 	},
 	{
 		name: "BarriAire",
-		src: "/partners/barriaire-logo.svg",
+		src: "/partners/barriaire-logo.webp",
 		href: "/proteccion-personal",
 	},
-	{
-		name: "Cobra",
-		src: "/partners/cobra-logo.svg",
-		href: "/proteccion-personal",
-	},
+    {
+        name: "Hex Armor",
+        src: "/partners/HexArmor_navy.webp",
+        href: "/proteccion-personal",
+    },
+    {
+        name: "Hex Armor EXT",
+        src: "/partners/EXT.webp",
+        href: "/proteccion-personal",
+    },
 ];
 
 
@@ -43,7 +48,7 @@ export default function Partners() {
 			<h2 className="text-3xl font-semibold text-center mb-8">
 				Nuestros Socios
 			</h2>
-			<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center justify-items-center">
+			<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center justify-items-center">
 				{partners.map((partner, index) => (
 					<Link key={index} href={partner.href} passHref>
 						<div key={index} className="relative w-32 h-16">

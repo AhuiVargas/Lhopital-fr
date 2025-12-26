@@ -9,7 +9,7 @@ const __dirname = dirname(__filename);
 
 const inputDir = join(__dirname, "public");
 
-const imageExtensions = [".jpg", ".jpeg", ".png"];
+const imageExtensions = [".jpg", ".jpeg", ".png", ".svg"];
 const skipFolders = ["catalogues"]; // folders to exclude
 const skipExtensions = [".webm", ".ttf", ".otf", ".webp"];
 

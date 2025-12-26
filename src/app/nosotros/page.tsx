@@ -27,7 +27,7 @@ export default function NosotrosPage() {
 	];
 	return (
 		<>
-			<HeroContainer title="Nosotros" imageSrc="/banners/nosotros.webp">
+			<HeroContainer title="Nosotros" imageSrc="/banners/nosotros1.webp">
 				<p className="mb-4">
 					<strong>Lhopital FR</strong> es una empresa líder dedicada a
 					ofrecer soluciones integrales para profesionales en Protección Civil,
