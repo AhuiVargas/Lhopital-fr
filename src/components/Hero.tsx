@@ -17,7 +17,7 @@ export default function Hero() {
 	const heroWordClass =
 		"font-[almaq] leading-none stroke-heavy text-transparent bg-clip-text drop-shadow-[4px_4px_0_#111]";
 	const heroWordStyle = {
-		backgroundImage: `url('https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket//beige-texture.webp')`,
+		backgroundImage: `url('/beige-texture.webp')`,
 		backgroundSize: "cover",
 		backgroundRepeat: "no-repeat",
 	};
@@ -25,7 +25,7 @@ export default function Hero() {
 	return (
 		<section className="relative w-full h-screen overflow-hidden text-white">
 			<video
-				src="https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket//HeroVid.webm"
+				src="/HeroVid.webm"
 				autoPlay
 				muted
 				loop
@@ -60,18 +60,18 @@ export default function Hero() {
 			</div>
 
 			{/* Hero content */}
-			<div className="relative z-10 flex flex-col items-center justify-center h-full px-4 pt-24">
-				{/* Logo */}
-				<div className="mb-4">
-					<Image
-						src="https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/LP-escudos/escudo_color.webp"
-						alt="Lhopital-FR logo"
-						width={250}
-						height={250}
-					/>
-				</div>
+		<div className="relative z-10 flex flex-col items-center justify-center h-full px-4 pt-24">
+			{/* Logo */}
+			<div className="mb-4">
+				<Image
+					src="/LP-escudos/escudo_color.webp"
+					alt="Lhopital-FR logo"
+					width={250}
+					height={250}
+				/>
+			</div>
 
-				{/* Mobile nav links */}
+            {/* Mobile nav links */}
 				<div className="md:hidden -mt-20 -mb-16 w-96 h-56 flex items-center justify-center">
 					<div className="flex items-center justify-center gap-1 text-center">
 						<NavLink href="/rescate">
