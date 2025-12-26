@@ -27,9 +27,9 @@ export default function NosotrosPage() {
 	];
 	return (
 		<>
-			<HeroContainer title="Nosotros" imageSrc="https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/banners/nosotros.webp">
+			<HeroContainer title="Nosotros" imageSrc="/banners/nosotros.webp">
 				<p className="mb-4">
-					<strong>Lhopital FR</strong> es una empresa mexicana dedicada a
+					<strong>Lhopital FR</strong> es una empresa líder dedicada a
 					ofrecer soluciones integrales para profesionales en Protección Civil,
 					Bomberos y Rescate con el objetivo de facilitar las tareas diarias de
 					las corporaciones dedicadas a proteger la integridad de la sociedad y
@@ -80,20 +80,20 @@ export default function NosotrosPage() {
 				</div>
 			</section>
 
-			<section className="relative text-white px-6 py-20 overflow-hidden">
-				{/* Background image + red overlay */}
-				<div className="absolute inset-0 -z-10">
-					<Image
-						src="https://nqtkjfgimpbdtfwigbpq.supabase.co/storage/v1/object/public/site-assets-bucket/showcase/burntBrickWall.webp"
-						alt="Fondo de valores"
-						fill
-						className="object-cover"
-						priority
-					/>
-					<div className="absolute inset-0 bg-[#b01f29]/50" />
-				</div>
-
-				{/* Content */}
+		<section className="relative text-white px-6 py-20 overflow-hidden">
+			{/* Background image + red overlay */}
+			<div className="absolute inset-0 -z-10">
+				<Image
+					src="/showcase/burntBrickWall.webp"
+					alt="Fondo de valores"
+					fill
+					className="object-cover"
+					priority
+				/>
+				<div className="absolute inset-0 bg-[#b01f29]/50" />
+			</div>
+            
+            {/* Content */}
 				<div className="max-w-6xl mx-auto relative z-10">
 					<h2 className="text-3xl font-bold text-center mb-12">Valores</h2>
 
