@@ -10,35 +10,21 @@ const partners = [
 		href: "/hazmat",
 	},
 	{
-		name: "Sava",
-		src: "/partners/Sava.webp",
+		name: "Res-Q-Jack",
+		src: "/partners/resqjay-logo.webp",
 		href: "/rescate",
+		containerClass: "relative w-44 h-20",
 	},
 	{
 		name: "PGI",
-		src: "/partners/PGI-logo.webp",
+		src: "/partners/PGI-new-logo.webp",
 		href: "/proteccion-personal",
 	},
 	{
-		name: "Fireline",
-		src: "/partners/fireline-logo.webp",
+		name: "HexArmor",
+		src: "/partners/HexArmor_navy.webp",
 		href: "/proteccion-personal",
 	},
-	{
-		name: "BarriAire",
-		src: "/partners/barriaire-logo.webp",
-		href: "/proteccion-personal",
-	},
-    {
-        name: "Hex Armor",
-        src: "/partners/HexArmor_navy.webp",
-        href: "/proteccion-personal",
-    },
-    {
-        name: "Hex Armor EXT",
-        src: "/partners/EXT.webp",
-        href: "/proteccion-personal",
-    },
 ];
 
 
@@ -51,7 +37,7 @@ export default function Partners() {
 			<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center justify-items-center">
 				{partners.map((partner, index) => (
 					<Link key={index} href={partner.href} passHref>
-						<div key={index} className="relative w-32 h-16">
+						<div key={index} className={partner.containerClass ?? "relative w-32 h-16"}>
 							<Image
 								src={partner.src}
 								alt={partner.name}
