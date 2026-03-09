@@ -47,7 +47,7 @@ export default function PersonalProtection() {
 				<FeatureAnimated
 					direction="left"
 					title="Protección para bomberos y rescatistas"
-					description="que garanticen su seguridad con base en su especialidad bajo los requerimientos de la NFPA 1971, 1977, 1975, 1951, 1999."
+					description="que garanticen su seguridad con base en su especialidad bajo los requerimientos de la NFPA 1970, 1977, 1975, 1951, 1999."
 					imageSrc="/features/proteccion1.webp"
 				/>
 

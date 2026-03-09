@@ -40,7 +40,7 @@ export default function Rescue() {
 					direction="left"
 					title="Equipo diseñado con enfoque especializado"
 					description="de acuerdo con las necesidades de los usuarios y de las operaciones de rescate, 
-						fabricados con alta tecnología bajo los requerimientos de NFPA 1936, EN 13731 y EN 13204."
+						fabricados con alta tecnología bajo los requerimientos de NFPA 1960, EN 13731, EN 13204, EN16471 y EN16473."
 					imageSrc="/features/rescate1.webp"
 				/>
 
@@ -55,7 +55,7 @@ export default function Rescue() {
 					direction="left"
 					title="Sistemas de estabilización"
 					description="primaria y secundaria para rescate en estructuras colapsadas, trincheras y espacios confinados"
-					imageSrc="/features/rescate3.webp"
+					imageSrc="/features/stabilization-new.webp"
 				/>
 			</section>
 			<section className="bg-[#FAF9F6] px-6 py-10 text-center text-black">
