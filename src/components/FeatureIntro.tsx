@@ -44,8 +44,8 @@ export default function FeatureIntro({
 						<CTAButton onClick={handleClick} hovered>
 							CONTÁCTANOS
 						</CTAButton>
-						<CTAButton catalogOptions={catalogOption} hovered>
-							DESCARGAR CATÁLOGO
+						<CTAButton onClick={handleClick} hovered>
+							SOLICITAR CATÁLOGO
 						</CTAButton>
 					</div>
 				</div>
@@ -65,8 +65,8 @@ export default function FeatureIntro({
 					<CTAButton onClick={handleClick} hovered>
 						CONTÁCTANOS
 					</CTAButton>
-					<CTAButton catalogOptions={catalogOption} hovered>
-						DESCARGAR CATÁLOGO
+					<CTAButton onClick={handleClick} hovered>
+						SOLICITAR CATÁLOGO
 					</CTAButton>
 				</div>
 			</div>
