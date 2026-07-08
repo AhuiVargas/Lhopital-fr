@@ -8,38 +8,35 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
 	metadataBase: new URL("https://www.lhopital-fr.mx"),
-	title: "Lhopital-FR - Equipos de Rescate y Emergencias en México",
-	description: "Empresa líder en equipos de rescate, protección civil y servicios de emergencia en México. Especialistas en rescate técnico, HAZMAT y protección personal para bomberos.",
-	keywords: "bomberos México, rescate técnico, equipos emergencia, protección civil, HAZMAT, rescate vehicular, bomberos profesionales, equipos rescate México",
-	authors: [{ name: "Lhopital-FR" }],
-	creator: "Lhopital-FR",
-	publisher: "Lhopital-FR",
+	title: "Lhopital FR | Equipo de Rescate, HAZMAT y Protección Personal en México",
+	description:
+		"Distribuidores exclusivos de Trelleborg, Res-Q-Jack, PGI y HexArmor en México. Equipo especializado para rescate técnico, materiales peligrosos y protección personal de bomberos, con certificaciones NFPA y EN.",
+	keywords:
+		"equipo de rescate México, HAZMAT, protección personal bomberos, Trelleborg México, Res-Q-Jack México, PGI, HexArmor, distribuidor equipo bomberos, protección civil",
+	authors: [{ name: "Lhopital FR" }],
+	creator: "Lhopital FR",
+	publisher: "Lhopital FR",
 	robots: "index,follow",
 	openGraph: {
-		title: "Lhopital-FR - Equipos de Rescate y Emergencias en México",
-		description: "Empresa líder en equipos de rescate, protección civil y servicios de emergencia en México. Especialistas en rescate técnico, HAZMAT y protección personal para bomberos.",
+		title: "Lhopital FR | Equipo de Rescate, HAZMAT y Protección Personal en México",
+		description:
+			"Distribuidores exclusivos de Trelleborg, Res-Q-Jack, PGI y HexArmor en México. Equipo especializado para rescate técnico, HAZMAT y protección personal de bomberos.",
 		url: "https://www.lhopital-fr.mx",
-		siteName: "Lhopital-FR",
-		images: [
-			{
-				url: "/favicon.ico",
-				width: 1200,
-				height: 630,
-				alt: "Lhopital-FR - Equipos de Rescate y Emergencias",
-			},
-		],
-		locale: "es_ES",
+		siteName: "Lhopital FR",
+		locale: "es_MX",
 		type: "website",
+		// Sin "images": Next.js usa automáticamente src/app/opengraph-image.tsx
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Lhopital-FR - Equipos de Rescate y Emergencias en México",
-		description: "Empresa líder en equipos de rescate, protección civil y servicios de emergencia en México.",
-		images: ["/favicon.ico"],
+		title: "Lhopital FR | Equipo de Rescate, HAZMAT y Protección Personal en México",
+		description:
+			"Distribuidores exclusivos de Trelleborg, Res-Q-Jack, PGI y HexArmor en México.",
 	},
-	verification: {
-		google: "your-google-verification-code",
-	},
+	// Cuando tengan el código de Google Search Console, descomenten y peguen aquí:
+	// verification: {
+	// 	google: "CODIGO-DE-VERIFICACION-AQUI",
+	// },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

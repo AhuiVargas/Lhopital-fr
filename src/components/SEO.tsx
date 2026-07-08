@@ -14,57 +14,70 @@ export function generateSEOMetadata({
   description,
   keywords,
   canonical,
-  ogImage = '/og-image.jpg',
+  ogImage,
   noindex = false,
 }: SEOProps): Metadata {
   const baseUrl = 'https://www.lhopital-fr.mx';
-  const fullTitle = `${title} | Lhopital-FR - Equipos de Rescate y Emergencias`;
-  
-  return {
+  const fullTitle = `${title} | Lhopital FR`;
+
+  const metadata: Metadata = {
     title: fullTitle,
     description,
-    keywords: keywords || 'bomberos, rescate, emergencias, protección civil, equipos de rescate, México, servicios de emergencia',
+    keywords:
+      keywords ||
+      'equipo de rescate, HAZMAT, protección personal bomberos, Trelleborg México, Res-Q-Jack México, PGI, HexArmor, distribuidor equipo bomberos México',
     robots: noindex ? 'noindex,nofollow' : 'index,follow',
     openGraph: {
       title: fullTitle,
       description,
       url: canonical ? `${baseUrl}${canonical}` : baseUrl,
-      siteName: 'Lhopital-FR',
-      images: [
-        {
-          url: ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`,
-          width: 1200,
-          height: 630,
-          alt: title,
-        },
-      ],
-      locale: 'es_ES',
+      siteName: 'Lhopital FR',
+      locale: 'es_MX',
       type: 'website',
+      // Sin "images": Next.js usa automáticamente opengraph-image.tsx.
+      // Solo se agrega si la página pasa una imagen propia (ogImage).
+      ...(ogImage && {
+        images: [
+          {
+            url: ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`,
+            width: 1200,
+            height: 630,
+            alt: title,
+          },
+        ],
+      }),
     },
     twitter: {
       card: 'summary_large_image',
       title: fullTitle,
       description,
-      images: [ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`],
+      ...(ogImage && {
+        images: [ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`],
+      }),
     },
     alternates: {
       canonical: canonical ? `${baseUrl}${canonical}` : baseUrl,
     },
   };
+
+  return metadata;
 }
 
 export function LocalBusinessSchema() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'Lhopital-FR',
-    description: 'Empresa especializada en equipos de rescate, protección civil y servicios de emergencia en México',
+    name: 'Lhopital FR',
+    description:
+      'Distribuidor de equipo especializado para rescate técnico, materiales peligrosos (HAZMAT) y protección personal en México. Distribuidores exclusivos de Trelleborg, Res-Q-Jack, PGI y HexArmor.',
     url: 'https://www.lhopital-fr.mx/',
     telephone: '+52-55-9470-5028',
+    email: 'contacto@lhopital-fr.mx',
     address: {
       '@type': 'PostalAddress',
-      addressCountry: 'CDMX',
-      addressLocality: 'México',
+      addressLocality: 'Ciudad de México',
+      addressRegion: 'CDMX',
+      addressCountry: 'MX',
     },
     geo: {
       '@type': 'GeoCoordinates',
@@ -74,8 +87,19 @@ export function LocalBusinessSchema() {
     openingHours: 'Mo-Fr 08:00-18:00',
     sameAs: [
       'https://www.instagram.com/lhopitalfr/',
+      'https://www.facebook.com/lhopitalfr',
+      'https://www.youtube.com/@LhopitalFR',
+      // Verifica que esta página de LinkedIn exista; si no, elimina la línea:
       'https://www.linkedin.com/company/lhopital-fr',
-      'https://www.facebook.com/profile.php?id=61584152751638&ref=pl_edit_xav_ig_profile_page_web#',
+    ],
+    brand: [
+      { '@type': 'Brand', name: 'Trelleborg' },
+      { '@type': 'Brand', name: 'Res-Q-Jack' },
+      { '@type': 'Brand', name: 'PGI' },
+      { '@type': 'Brand', name: 'HexArmor' },
+      { '@type': 'Brand', name: 'LION' },
+      { '@type': 'Brand', name: 'Genesis Rescue Systems' },
+      { '@type': 'Brand', name: 'Turtle Plastics' },
     ],
     serviceArea: {
       '@type': 'Country',
@@ -83,14 +107,15 @@ export function LocalBusinessSchema() {
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Servicios de Rescate y Emergencias',
+      name: 'Equipo de Rescate y Emergencias',
       itemListElement: [
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'ProductGroup',
             name: 'Equipos de Rescate Técnico',
-            description: 'Equipos especializados para rescate vehicular, estructuras colapsadas y espacios confinados',
+            description:
+              'Sistemas de estabilización Res-Q-Jack y equipo Genesis para rescate vehicular, estructuras colapsadas y espacios confinados',
           },
         },
         {
@@ -98,7 +123,8 @@ export function LocalBusinessSchema() {
           itemOffered: {
             '@type': 'ProductGroup',
             name: 'Protección Personal',
-            description: 'Equipos de protección individual para bomberos y personal de emergencias',
+            description:
+              'Trajes PGI, equipo LION y guantes HexArmor para bomberos y personal de emergencias, con certificaciones NFPA y EN',
           },
         },
         {
@@ -106,7 +132,8 @@ export function LocalBusinessSchema() {
           itemOffered: {
             '@type': 'ProductGroup',
             name: 'Materiales Peligrosos (HAZMAT)',
-            description: 'Equipos especializados para manejo de materiales peligrosos',
+            description:
+              'Equipos Trelleborg para sellado, contención y manejo de materiales peligrosos',
           },
         },
       ],
