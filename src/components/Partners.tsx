@@ -13,7 +13,7 @@ const partners = [
 		name: "Res-Q-Jack",
 		src: "/partners/resqjay-logo.webp",
 		href: "/rescate",
-		containerClass: "relative w-56 h-24",
+		containerClass: "relative w-72 h-32",
 	},
 	{
 		name: "PGI",

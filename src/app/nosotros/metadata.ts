@@ -2,8 +2,9 @@ import { Metadata } from 'next';
 import { generateSEOMetadata } from '@/components/SEO';
 
 export const metadata: Metadata = generateSEOMetadata({
-	title: "Nosotros - Empresa de Rescate",
-	description: "Lhopital FR es una empresa mexicana especializada en soluciones integrales para Protección Civil, Bomberos y Rescate. Trabajamos con gobiernos municipales, estatales y federales.",
-	keywords: "empresa rescate, protección civil, bomberos profesionales, rescate México, equipos emergencia, servicios rescate",
-	canonical: "/nosotros",
+	    title: "Nosotros — Distribuidores de Equipo para Bomberos y Rescate en México",
+    description: "Conoce a Lhopital FR: distribuidores exclusivos de Trelleborg - Sava, Res-Q-Jack, PGI y HexArmor en México. Proveedores de equipo especializado para bomberos, rescatistas, protección civil , dependencias de gobierno e industria minera",
+    keywords: "Lhopital FR, distribuidor equipo bomberos México, proveedor protección civil, equipo emergencias gobierno, LION México, Res-Q-Jack México, Trelleborg México, Sava México, EPP profesional, EPP rescatistas, EPP bomberos",
+    canonical: "/nosotros",
+
 });

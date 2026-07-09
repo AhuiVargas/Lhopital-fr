@@ -1,70 +1,73 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
+// import { useState, useEffect, useRef } from "react";
 
-export interface CatalogOption {
-	label: string;
-	file: string;
-}
+// Catalog dropdown/download functionality is disabled — catalog CTAs now
+// open the contact modal instead. Kept commented out in case it's revisited.
+// export interface CatalogOption {
+// 	label: string;
+// 	file: string;
+// }
 
 interface CTAButtonProps {
 	onClick?: () => void;
 	children: React.ReactNode;
 	hovered?: boolean;
-	catalogOptions?: CatalogOption[];
+	// catalogOptions?: CatalogOption[];
 }
 
 export default function CTAButton({
 	onClick,
 	children,
 	hovered = false,
-	catalogOptions = [],
+	// catalogOptions = [],
 }: CTAButtonProps) {
-	const isCatalogButton = catalogOptions.length > 0;
-	const [open, setOpen] = useState(false);
-	const dropdownRef = useRef<HTMLDivElement>(null);
+	// const isCatalogButton = catalogOptions.length > 0;
+	// const [open, setOpen] = useState(false);
+	// const dropdownRef = useRef<HTMLDivElement>(null);
 
-const handleCatalogClick = (file: string) => {
-	window.open(file, "_blank");
-	setOpen(false);
-};
-
+	// const handleCatalogClick = (file: string) => {
+	// 	window.open(file, "_blank");
+	// 	setOpen(false);
+	// };
 
 	const handleClick = () => {
-		if (isCatalogButton) {
-			if (catalogOptions.length === 1) {
-				handleCatalogClick(catalogOptions[0].file);
-			} else {
-				setOpen(!open);
-			}
-		} else if (onClick) {
+		// if (isCatalogButton) {
+		// 	if (catalogOptions.length === 1) {
+		// 		handleCatalogClick(catalogOptions[0].file);
+		// 	} else {
+		// 		setOpen(!open);
+		// 	}
+		// } else if (onClick) {
+		if (onClick) {
 			onClick();
 		}
 	};
 
-	useEffect(() => {
-		const handleOutsideClick = (e: MouseEvent) => {
-			if (
-				dropdownRef.current &&
-				!dropdownRef.current.contains(e.target as Node)
-			) {
-				setOpen(false);
-			}
-		};
+	// useEffect(() => {
+	// 	const handleOutsideClick = (e: MouseEvent) => {
+	// 		if (
+	// 			dropdownRef.current &&
+	// 			!dropdownRef.current.contains(e.target as Node)
+	// 		) {
+	// 			setOpen(false);
+	// 		}
+	// 	};
 
-		if (open) {
-			document.addEventListener("mousedown", handleOutsideClick);
-		} else {
-			document.removeEventListener("mousedown", handleOutsideClick);
-		}
+	// 	if (open) {
+	// 		document.addEventListener("mousedown", handleOutsideClick);
+	// 	} else {
+	// 		document.removeEventListener("mousedown", handleOutsideClick);
+	// 	}
 
-		return () => {
-			document.removeEventListener("mousedown", handleOutsideClick);
-		};
-	}, [open]);
+	// 	return () => {
+	// 		document.removeEventListener("mousedown", handleOutsideClick);
+	// 	};
+	// }, [open]);
 
 	return (
-		<div className="relative" ref={dropdownRef}>
+		<div className="relative">
 			<button
 				onClick={handleClick}
 				className={`relative px-4 py-2 text-white font-light text-xl overflow-hidden z-0
@@ -88,7 +91,7 @@ const handleCatalogClick = (file: string) => {
 				<span className="relative z-10">{children}</span>
 			</button>
 
-			{catalogOptions.length > 1 && (
+			{/* {catalogOptions.length > 1 && (
 				<div
 					className={`absolute top-full left-0 bg-white text-[#172E6E] shadow-md
                         z-50 w-52 rounded overflow-hidden transition-all duration-300 origin-top transform
@@ -109,7 +112,7 @@ const handleCatalogClick = (file: string) => {
 						</button>
 					))}
 				</div>
-			)}
+			)} */}
 		</div>
 	);
 }

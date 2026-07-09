@@ -7,13 +7,38 @@ import FeatureIntro from "@/components/FeatureIntro";
 import HeroContainer from "@/components/HeroContainer";
 import Modal from "@/components/Modal";
 import { useState } from "react";
+import Image from "next/image";
+
+const brandLogos = [
+    {
+        name: "Res-Q-Jack",
+        src: "/partners/resqjay-logo.webp",
+        invert: true,
+		size: "h-16 md:h-20 w-52 md:w-60",
+    },
+    {
+        name: "Trelleborg",
+        src: "/partners/trelleborg-logo.webp",
+        invert: true,
+    },
+    {
+        name: "Sava",
+        src: "/partners/Sava.png",
+        invert: false,
+    },
+    {
+        name: "Génesis",
+        src: "/partners/gsr_hrz_logomark_white_red.png",
+        invert: true,
+    },
+];
 
 export default function Rescue() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
-	const catalogOptions = [
-		{ label: "Catálogo Rescate", file: "/catalogues/rescue-catalog.pdf" },
-	];
+	// const catalogOptions = [
+	// 	{ label: "Catálogo Rescate", file: "/catalogues/rescue-catalog.pdf" },
+	// ];
 
 	return (
 		<>
@@ -24,13 +49,35 @@ export default function Rescue() {
 					rescate en estructuras colapsadas (USAR) y recuperación de vehículos
 					pesados y comerciales.
 				</p>
+                {/* Marcas distribuidas */}
+                <div className="grid grid-cols-2 gap-x-10 gap-y-6 mt-8 max-w-md items-center">
+                    {brandLogos.map((brand) => (
+                        <div
+                            key={brand.name}
+                            className={`relative ${brand.size ?? "h-14 md:h-16 w-40 md:w-44"}`}
+                        >
+                            <Image
+                                src={brand.src}
+                                alt={brand.name}
+                                fill
+                                unoptimized
+                                className={
+                                    brand.invert
+                                        ? "object-contain brightness-0 invert opacity-90"
+                                        : "object-contain"
+                                }
+                            />
+                        </div>
+                    ))}
+                </div>
+
 			</HeroContainer>
 			<FeatureIntro
 				title="Todos nuestros equipos cuentan con las certificaciones más importantes a nivel mundial"
 				subtitle="como NFPA y EN que garantizan el buen funcionamiento y rendimiento de los equipos aún en los escenarios más complejos."
 			imageSrc="/items/rescate.webp"
 			alt="Rescate Item"
-				catalogOption={catalogOptions}
+				// catalogOption={catalogOptions}
 			/>
 			<section className="w-full bg-white text-red-600 py-20 px-6 md:px-20 ">
 				<h1 className="text-3xl md:text-5xl font-bold text-center mb-10">

@@ -7,12 +7,26 @@ import CTAButton from "@/components/CTAButton";
 import Modal from "@/components/Modal";
 import { useState } from "react";
 import ContactoForm from "@/components/ContactForm";
+import Image from "next/image";
+
+const brandLogos = [
+	{
+		name: "Trelleborg",
+		src: "/partners/trelleborg-logo.webp",
+		invert: true,
+	},
+	{
+		name: "Sava",
+		src: "/partners/Sava.png",
+		invert: false,
+	},
+];
 
 export default function Hazmat() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
-	const catalogOption = [
-		{ label: "Catálogo Hazmat PGI", file: "/catalogues/rescue-catalog.pdf" },
-	];
+	// const catalogOption = [
+	// 	{ label: "Catálogo Hazmat PGI", file: "/catalogues/rescue-catalog.pdf" },
+	// ];
 
 	return (
 		<>
@@ -22,13 +36,35 @@ export default function Hazmat() {
 					materiales peligrosos, descontaminación, derrames químicos y
 					protección del medio ambiente.
 				</p>
+{/* Marcas distribuidas */}
+				<div className="grid grid-cols-2 gap-x-10 mt-8 max-w-md items-center">
+					{brandLogos.map((brand) => (
+						<div
+							key={brand.name}
+							className="relative h-14 md:h-16 w-40 md:w-44"
+						>
+							<Image
+								src={brand.src}
+								alt={brand.name}
+								fill
+								unoptimized
+								className={
+									brand.invert
+										? "object-contain brightness-0 invert opacity-90"
+										: "object-contain"
+								}
+							/>
+						</div>
+					))}
+				</div>
+
 			</HeroContainer>
 			<FeatureIntro
 				title="La prioridad de nuestros equipos es proteger a los usuarios y prevenir situaciones de riesgo."
 				subtitle=""
 			imageSrc="/items/hazmat.webp"
 			alt="Sava-bags"
-				catalogOption={catalogOption}
+				// catalogOption={catalogOption}
 			/>
 			<section className="w-full bg-white py-20 px-6 md:px-20 ">
 				<h1 className="text-3xl md:text-5xl text-red-600 font-bold text-center mb-10">

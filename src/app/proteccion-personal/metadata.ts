@@ -2,8 +2,9 @@ import { Metadata } from 'next';
 import { generateSEOMetadata } from '@/components/SEO';
 
 export const metadata: Metadata = generateSEOMetadata({
-	title: "Protección Personal para Bomberos",
-	description: "Equipos de protección personal certificados NFPA para bomberos y rescatistas. Trajes ergonómicos y seguros con certificación NFPA 1971, 1977, 1975, 1951, 1999.",
-	keywords: "protección personal bomberos, equipos NFPA, trajes bomberos, protección rescatistas, equipos certificados bomberos",
-	canonical: "/proteccion-personal",
+	    title: "Protección Personal para Bomberos — PGI, HexArmor y LION en México",
+    description: "Trajes y capuchas PGI, guantes de rescate HexArmor (distribuidores exclusivos) y equipo LION para bomberos profesionales y rescatistas en México. Certificaciones NFPA y EN.",
+    keywords: "equipo protección personal bomberos, PGI México, guantes HexArmor, trajes bombero NFPA, LION equipo bomberos, EPP emergencias, traje de bomberos certificado, LION México, EPP rescatistas México",
+    canonical: "/proteccion-personal",
+
 });
