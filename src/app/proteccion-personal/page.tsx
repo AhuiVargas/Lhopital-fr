@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import ContactoForm from "@/components/ContactForm";
 import CTAButton from "@/components/CTAButton";
 import FeatureAnimated from "@/components/FeatureAnimated";
@@ -7,6 +8,21 @@ import FeatureIntro from "@/components/FeatureIntro";
 import HeroContainer from "@/components/HeroContainer";
 import Modal from "@/components/Modal";
 import { useState } from "react";
+
+const brandLogos = [
+	{
+		name: "PGI",
+		src: "/partners/PGI-new-logo.webp",
+	},
+	{
+		name: "HexArmor",
+		src: "/partners/EXT-2.png",
+	},
+	{
+		name: "LION",
+		src: "/partners/lion_corporate_logo_tagline_reverse.png",
+	},
+];
 
 export default function PersonalProtection() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,9 +38,9 @@ export default function PersonalProtection() {
 
 	return (
 		<>
-		<HeroContainer
-			title="Protección Personal"
-			imageSrc="/banners/proteccion-personal.webp"
+			<HeroContainer
+				title="Protección Personal"
+				imageSrc="/banners/proteccion-personal.webp"
 			>
 				<p className="text-lg md:text-2xl font-light max-w-xl">
 					El equipo de protección personal es la parte más importante para
@@ -32,12 +48,27 @@ export default function PersonalProtection() {
 					con los equipos de protección personal más ergonómicos y seguros para
 					los profesionales.
 				</p>
+
+				{/* Marcas distribuidas */}
+				<div className="flex items-center gap-8 md:gap-10 mt-8 flex-wrap">
+					{brandLogos.map((brand) => (
+						<div key={brand.name} className="relative h-12 md:h-14 w-32 md:w-38">
+							<Image
+								src={brand.src}
+								alt={brand.name}
+								fill
+								unoptimized
+								className="object-contain brightness-0 invert opacity-90"
+							/>
+						</div>
+					))}
+				</div>
 			</HeroContainer>
 			<FeatureIntro
 				title="Todos nuestros equipos cuentan con certificación NFPA "
 				subtitle="(National Fire Protection Association), garantizando la seguridad y calidad de los equipos."
-			imageSrc="/items/pp1.webp"
-			alt="Protección Personal item"
+				imageSrc="/items/pp1.webp"
+				alt="Protección Personal item"
 				catalogOption={catalogOptions}
 			/>
 			<section className="w-full bg-white text-red-600 py-20 px-6 md:px-20 ">
