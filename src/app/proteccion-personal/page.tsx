@@ -26,15 +26,15 @@ const brandLogos = [
 
 export default function PersonalProtection() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
-	const catalogOptions = [
-		{
-			label: "Catálogo BarriAire-Carbon",
-			file: "/catalogues/pgi-hood-carbon.pdf",
-		},
-		{ label: "Catálogo BarriAire-Gold", file: "/catalogues/pgi-hood-gold.pdf" },
-		{ label: "Catálogo PGI-Fireline-Suits", file: "/catalogues/pgi-suits.pdf" },
-		{ label: "Catálogo HexArmor", file: "/catalogues/HEXARMOR-F&R.pdf" },
-	];
+	// const catalogOptions = [
+	// 	{
+	// 		label: "Catálogo BarriAire-Carbon",
+	// 		file: "/catalogues/pgi-hood-carbon.pdf",
+	// 	},
+	// 	{ label: "Catálogo BarriAire-Gold", file: "/catalogues/pgi-hood-gold.pdf" },
+	// 	{ label: "Catálogo PGI-Fireline-Suits", file: "/catalogues/pgi-suits.pdf" },
+	// 	{ label: "Catálogo HexArmor", file: "/catalogues/HEXARMOR-F&R.pdf" },
+	// ];
 
 	return (
 		<>
@@ -69,7 +69,7 @@ export default function PersonalProtection() {
 				subtitle="(National Fire Protection Association), garantizando la seguridad y calidad de los equipos."
 				imageSrc="/items/pp1.webp"
 				alt="Protección Personal item"
-				catalogOption={catalogOptions}
+				// catalogOption={catalogOptions}
 			/>
 			<section className="w-full bg-white text-red-600 py-20 px-6 md:px-20 ">
 				<h1 className="text-3xl md:text-5xl font-bold text-center mb-10">

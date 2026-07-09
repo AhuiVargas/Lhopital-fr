@@ -36,9 +36,9 @@ const brandLogos = [
 export default function Rescue() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
-	const catalogOptions = [
-		{ label: "Catálogo Rescate", file: "/catalogues/rescue-catalog.pdf" },
-	];
+	// const catalogOptions = [
+	// 	{ label: "Catálogo Rescate", file: "/catalogues/rescue-catalog.pdf" },
+	// ];
 
 	return (
 		<>
@@ -77,7 +77,7 @@ export default function Rescue() {
 				subtitle="como NFPA y EN que garantizan el buen funcionamiento y rendimiento de los equipos aún en los escenarios más complejos."
 			imageSrc="/items/rescate.webp"
 			alt="Rescate Item"
-				catalogOption={catalogOptions}
+				// catalogOption={catalogOptions}
 			/>
 			<section className="w-full bg-white text-red-600 py-20 px-6 md:px-20 ">
 				<h1 className="text-3xl md:text-5xl font-bold text-center mb-10">

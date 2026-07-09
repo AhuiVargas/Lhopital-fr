@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import CTAButton, { CatalogOption } from "./CTAButton";
+import CTAButton from "./CTAButton";
 import Modal from "./Modal";
 import ContactForm from "./ContactForm";
 import { useState } from "react";
@@ -11,7 +11,6 @@ interface FeatureIntroProps {
 	subtitle: string;
 	imageSrc: string;
 	alt?: string;
-	catalogOption?: CatalogOption[];
 }
 
 export default function FeatureIntro({
@@ -19,7 +18,6 @@ export default function FeatureIntro({
 	subtitle,
 	imageSrc,
 	alt = "",
-	catalogOption = [],
 }: FeatureIntroProps) {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 

@@ -24,9 +24,9 @@ const brandLogos = [
 
 export default function Hazmat() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
-	const catalogOption = [
-		{ label: "Catálogo Hazmat PGI", file: "/catalogues/rescue-catalog.pdf" },
-	];
+	// const catalogOption = [
+	// 	{ label: "Catálogo Hazmat PGI", file: "/catalogues/rescue-catalog.pdf" },
+	// ];
 
 	return (
 		<>
@@ -64,7 +64,7 @@ export default function Hazmat() {
 				subtitle=""
 			imageSrc="/items/hazmat.webp"
 			alt="Sava-bags"
-				catalogOption={catalogOption}
+				// catalogOption={catalogOption}
 			/>
 			<section className="w-full bg-white py-20 px-6 md:px-20 ">
 				<h1 className="text-3xl md:text-5xl text-red-600 font-bold text-center mb-10">
