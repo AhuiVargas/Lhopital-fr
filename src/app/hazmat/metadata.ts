@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import { generateSEOMetadata } from '@/components/SEO';
 
 export const metadata: Metadata = generateSEOMetadata({
-	title: "HAZMAT - Materiales Peligrosos",
-	description: "Equipos especializados para contención, recuperación y control de materiales peligrosos. Soluciones para descontaminación, derrames químicos y protección ambiental.",
-	keywords: "HAZMAT, materiales peligrosos, descontaminación, derrames químicos, protección ambiental, equipos químicos",
+	title: "Equipo HAZMAT — Distribuidor Exclusivo Trelleborg y SAVA en México",
+	description: "Kits Trelleborg y SAVA para sellado de tuberías y tanques perforados, contención de fugas y manejo de materiales peligrosos. Distribuidores exclusivos en México para bomberos y protección civil.",
+	keywords: "equipo HAZMAT México, Trelleborg México, SAVA México, sellado de fugas, materiales peligrosos, kit hazmat bomberos, contención químicos",
 	canonical: "/hazmat",
 });
