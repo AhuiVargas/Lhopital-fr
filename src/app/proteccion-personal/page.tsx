@@ -52,7 +52,7 @@ export default function PersonalProtection() {
 				{/* Marcas distribuidas */}
 				<div className="flex items-center gap-8 md:gap-10 mt-8 flex-wrap">
 					{brandLogos.map((brand) => (
-						<div key={brand.name} className="relative h-12 md:h-14 w-32 md:w-38">
+						<div key={brand.name} className="relative h-12 md:h-14 w-32 md:w-40">
 							<Image
 								src={brand.src}
 								alt={brand.name}

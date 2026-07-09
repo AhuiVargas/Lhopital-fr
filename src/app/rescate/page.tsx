@@ -7,6 +7,31 @@ import FeatureIntro from "@/components/FeatureIntro";
 import HeroContainer from "@/components/HeroContainer";
 import Modal from "@/components/Modal";
 import { useState } from "react";
+import Image from "next/image";
+
+const brandLogos = [
+    {
+        name: "Res-Q-Jack",
+        src: "/partners/resqjay-logo.webp",
+        invert: true,
+		size: "h-16 md:h-20 w-52 md:w-60",
+    },
+    {
+        name: "Trelleborg",
+        src: "/partners/trelleborg-logo.webp",
+        invert: true,
+    },
+    {
+        name: "Sava",
+        src: "/partners/Sava.png",
+        invert: false,
+    },
+    {
+        name: "Génesis",
+        src: "/partners/gsr_hrz_logomark_white_red.png",
+        invert: true,
+    },
+];
 
 export default function Rescue() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,6 +49,28 @@ export default function Rescue() {
 					rescate en estructuras colapsadas (USAR) y recuperación de vehículos
 					pesados y comerciales.
 				</p>
+                {/* Marcas distribuidas */}
+                <div className="grid grid-cols-2 gap-x-10 gap-y-6 mt-8 max-w-md items-center">
+                    {brandLogos.map((brand) => (
+                        <div
+                            key={brand.name}
+                            className={`relative ${brand.size ?? "h-14 md:h-16 w-40 md:w-44"}`}
+                        >
+                            <Image
+                                src={brand.src}
+                                alt={brand.name}
+                                fill
+                                unoptimized
+                                className={
+                                    brand.invert
+                                        ? "object-contain brightness-0 invert opacity-90"
+                                        : "object-contain"
+                                }
+                            />
+                        </div>
+                    ))}
+                </div>
+
 			</HeroContainer>
 			<FeatureIntro
 				title="Todos nuestros equipos cuentan con las certificaciones más importantes a nivel mundial"
