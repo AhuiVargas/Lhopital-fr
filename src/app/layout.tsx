@@ -33,10 +33,10 @@ export const metadata: Metadata = {
 		description:
 			"Distribuidores exclusivos de Trelleborg, Res-Q-Jack, PGI y HexArmor en México.",
 	},
-	// Cuando tengan el código de Google Search Console, descomenten y peguen aquí:
-	// verification: {
-	// 	google: "CODIGO-DE-VERIFICACION-AQUI",
-	// },
+	
+	verification: {
+	google: "TdzOZS0XJr1024DvLzy9wwsYMCjnMxmIkw0yEeKoghg",
+	},
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
